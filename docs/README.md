@@ -9,6 +9,6 @@ All product, engineering, operations, and sensitive documents for ElAris live in
 | `operations/` | Cohort and safety runbooks |
 | `legal-safety/` | Internal policy notes |
 | `sensitive/` | Admission rubrics and internal guides |
-| `design/` | Figma brief, tokens, examples |
+| `design/` | Design briefs, tokens, examples |
 
-Keep this repository **private**.
+See also [structure.md](./structure.md). Keep this repository **private**.
