@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elaris — Branding & Design Directions (examples)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Instrument+Serif:ital@0;1&family=Outfit:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0f1c1a;
+      --paper: #f7f4ef;
+      --mute: #5c6a66;
+      --line: #ddd6cc;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "DM Sans", system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.5;
+    }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 48px 24px 96px; }
+    .doc-kicker {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--mute);
+      margin: 0 0 12px;
+    }
+    h1 {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      line-height: 1.15;
+      margin: 0 0 16px;
+      max-width: 18ch;
+    }
+    .lede {
+      max-width: 62ch;
+      color: var(--mute);
+      font-size: 1.05rem;
+      margin: 0 0 40px;
+    }
+    .product-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 24px 28px;
+      background: #fff;
+      margin-bottom: 56px;
+    }
+    .product-card h2 {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    .product-card p { margin: 0 0 12px; color: var(--mute); }
+    .product-card ul {
+      margin: 0;
+      padding-left: 1.1em;
+      color: var(--ink);
+    }
+    .product-card li { margin-bottom: 4px; }
+    .promise {
+      margin-top: 16px;
+      padding: 14px 16px;
+      background: #f0ebe3;
+      border-radius: 10px;
+      font-style: italic;
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: 1.25rem;
+    }
+
+    section { margin-bottom: 64px; }
+    .sec-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+    .sec-note {
+      color: var(--mute);
+      margin: 0 0 24px;
+      max-width: 60ch;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-label {
+      padding: 14px 16px 0;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mute);
+    }
+    .card-title {
+      padding: 4px 16px 12px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .stage {
+      min-height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 28px 20px;
+      position: relative;
+    }
+    .card-why {
+      padding: 14px 16px 18px;
+      font-size: 0.88rem;
+      color: var(--mute);
+      border-top: 1px solid var(--line);
+      margin-top: auto;
+    }
+
+    /* —— Wordmark A: Split lockup (current spirit) —— */
+    .wm-a {
+      background: #faf6f2;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 3.4rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #241522;
+    }
+    .wm-a .aris { color: #4a2744; font-style: italic; }
+
+    /* —— Wordmark B: Monumental Syne —— */
+    .wm-b {
+      background: #0f1c1a;
+      font-family: Syne, sans-serif;
+      font-weight: 800;
+      font-size: 3rem;
+      letter-spacing: -0.04em;
+      color: #f4f0ea;
+    }
+    .wm-b span { color: #7eb8a8; }
+
+    /* —— Wordmark C: Soft monogram (current plum / rose-gold) —— */
+    .wm-c {
+      background: #4a2744;
+      flex-direction: column;
+      gap: 10px;
+      color: #fff;
+    }
+    .wm-c .mono {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: #e8a88a;
+      color: #2f1530;
+      display: grid;
+      place-items: center;
+      font-family: Outfit, sans-serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      letter-spacing: -0.06em;
+    }
+    .wm-c .word {
+      font-family: Outfit, sans-serif;
+      font-weight: 600;
+      font-size: 1.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #faf6f2;
+    }
+
+    /* —— Focused monogram trials (current tokens) —— */
+    .mono-focus {
+      border: 1px solid #e8dfe4;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #fff;
+      margin-bottom: 28px;
+    }
+    .mono-focus-head {
+      padding: 18px 22px;
+      border-bottom: 1px solid #e8dfe4;
+    }
+    .mono-focus-head h3 {
+      margin: 0 0 4px;
+      font-size: 1.05rem;
+    }
+    .mono-focus-head p {
+      margin: 0;
+      color: #6e5d6a;
+      font-size: 0.9rem;
+    }
+    .mono-variants {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .mono-variant {
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 28px 16px;
+      border-right: 1px solid #e8dfe4;
+      border-bottom: 1px solid #e8dfe4;
+    }
+    .mono-variant:last-child { border-right: none; }
+    .mono-variant .tag {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.65;
+    }
+    .lockup {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .lockup.row {
+      flex-direction: row;
+      gap: 12px;
+    }
+    .e-mark {
+      display: grid;
+      place-items: center;
+      font-family: Outfit, sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.06em;
+      line-height: 1;
+    }
+    .e-mark.sm { width: 40px; height: 40px; border-radius: 10px; font-size: 1.05rem; }
+    .e-mark.md { width: 56px; height: 56px; border-radius: 14px; font-size: 1.35rem; }
+    .e-mark.lg { width: 72px; height: 72px; border-radius: 18px; font-size: 1.75rem; }
+    .caps-word {
+      font-family: Outfit, sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    .caps-word.sm { font-size: 0.95rem; }
+    .caps-word.md { font-size: 1.35rem; }
+    .caps-word.lg { font-size: 1.75rem; }
+
+    /* V1 Paper */
+    .mv-paper { background: #faf6f2; color: #241522; }
+    .mv-paper .e-mark { background: #4a2744; color: #e8a88a; }
+    .mv-paper .caps-word { color: #241522; }
+
+    /* V2 Plum field */
+    .mv-plum { background: #4a2744; color: #faf6f2; }
+    .mv-plum .e-mark { background: #e8a88a; color: #2f1530; }
+    .mv-plum .caps-word { color: #faf6f2; }
+    .mv-plum .tag { color: #f0e6ee; }
+
+    /* V3 Dark plum */
+    .mv-dark { background: #2f1530; color: #faf6f2; }
+    .mv-dark .e-mark {
+      background: transparent;
+      border: 1.5px solid #e8a88a;
+      color: #e8a88a;
+    }
+    .mv-dark .caps-word { color: #faf6f2; }
+    .mv-dark .tag { color: #f0e6ee; }
+
+    /* V4 Soft blush */
+    .mv-blush { background: #f8ebe3; color: #241522; }
+    .mv-blush .e-mark { background: #4a2744; color: #faf6f2; }
+    .mv-blush .caps-word { color: #4a2744; }
+
+    /* V5 Horizontal header lockup */
+    .mv-header { background: #fff; color: #241522; }
+    .mv-header .e-mark { background: #4a2744; color: #e8a88a; }
+    .mv-header .caps-word { color: #241522; letter-spacing: 0.16em; }
+
+    /* Hero with monogram + caps */
+    .mono-hero {
+      min-height: 440px;
+      background:
+        linear-gradient(115deg, rgba(47,21,48,0.92) 0%, rgba(74,39,68,0.55) 48%, rgba(47,21,48,0.25) 100%),
+        url("https://images.unsplash.com/photo-1478144592103-25e218a580bb?auto=format&fit=crop&w=1600&q=80") center/cover;
+      color: #faf6f2;
+      padding: 36px 36px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+    }
+    .mono-hero-nav {
+      position: absolute;
+      top: 22px; left: 28px; right: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.85rem;
+    }
+    .mono-hero-nav .nav-lockup {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .mono-hero-nav .e-mark {
+      width: 36px; height: 36px; border-radius: 9px; font-size: 0.95rem;
+      background: #e8a88a; color: #2f1530;
+    }
+    .mono-hero-nav .caps-word {
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+      color: #faf6f2;
+    }
+    .mono-hero-nav .links { opacity: 0.75; display: flex; gap: 16px; }
+    .mono-hero-brand {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .mono-hero-brand .e-mark {
+      width: 64px; height: 64px; border-radius: 16px; font-size: 1.55rem;
+      background: #e8a88a; color: #2f1530;
+    }
+    .mono-hero-brand .caps-word {
+      font-size: clamp(2rem, 5vw, 3rem);
+      letter-spacing: 0.22em;
+      color: #faf6f2;
+    }
+    .mono-hero .hero-line {
+      font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+      line-height: 1.3;
+      margin: 0 0 10px;
+      max-width: 28ch;
+      font-weight: 500;
+    }
+    .mono-hero .hero-sub {
+      margin: 0 0 22px;
+      opacity: 0.85;
+      font-size: 0.98rem;
+      max-width: 40ch;
+    }
+    .mono-hero .btn-primary { background: #e8a88a; color: #2f1530; }
+    .mono-hero .btn-ghost {
+      background: transparent;
+      border: 1px solid rgba(250,246,242,0.45);
+      color: #faf6f2;
+    }
+
+    /* —— Wordmark D: Era underline —— */
+    .wm-d {
+      background: #fff;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .wm-d .word {
+      font-family: Fraunces, Georgia, serif;
+      font-size: 3.2rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      letter-spacing: -0.03em;
+    }
+    .wm-d .rule {
+      width: 72%;
+      height: 2px;
+      background: #e07a5f;
+      border-radius: 2px;
+    }
+    .wm-d .sub {
+      font-family: Outfit, sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #7a7068;
+    }
+
+    /* —— Wordmark E: Dual weight —— */
+    .wm-e {
+      background: #241522;
+    }
+    .wm-e .word {
+      font-family: Outfit, sans-serif;
+      font-size: 2.8rem;
+      font-weight: 300;
+      color: #faf6f2;
+      letter-spacing: 0.02em;
+    }
+    .wm-e .word b {
+      font-weight: 700;
+      color: #e8a88a;
+    }
+
+    /* —— Heroes —— */
+    .hero-grid {
+      display: grid;
+      gap: 28px;
+    }
+    .hero-frame {
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      overflow: hidden;
+      background: #111;
+    }
+    .hero-meta {
+      padding: 16px 20px;
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+    }
+    .hero-meta h3 {
+      margin: 0 0 4px;
+      font-size: 1.05rem;
+    }
+    .hero-meta p {
+      margin: 0;
+      color: var(--mute);
+      font-size: 0.9rem;
+    }
+    .hero-stage {
+      min-height: 420px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 40px 36px 44px;
+      color: #fff;
+      overflow: hidden;
+    }
+    .hero-stage .nav {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 28px;
+      font-size: 0.85rem;
+      z-index: 2;
+    }
+    .hero-stage .nav .logo { font-weight: 700; letter-spacing: -0.02em; }
+    .hero-stage .nav .links { opacity: 0.85; display: flex; gap: 18px; }
+    .hero-stage .nav .links span { opacity: 0.7; }
+    .hero-content { position: relative; z-index: 2; max-width: 520px; }
+    .hero-brand-big {
+      font-size: clamp(2.8rem, 7vw, 4.5rem);
+      line-height: 0.95;
+      margin: 0 0 18px;
+      letter-spacing: -0.03em;
+    }
+    .hero-line {
+      font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+      line-height: 1.3;
+      margin: 0 0 10px;
+      max-width: 28ch;
+      font-weight: 500;
+    }
+    .hero-sub {
+      margin: 0 0 22px;
+      opacity: 0.85;
+      font-size: 0.98rem;
+      max-width: 40ch;
+    }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: none;
+      cursor: default;
+    }
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.45);
+      color: #fff;
+    }
+
+    /* Direction 1 — Editorial teal (docs overview) */
+    .d1 {
+      background:
+        linear-gradient(105deg, rgba(15,28,26,0.82) 0%, rgba(15,28,26,0.35) 55%, rgba(15,28,26,0.15) 100%),
+        url("https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1600&q=80") center/cover;
+    }
+    .d1 .hero-brand-big { font-family: Syne, sans-serif; font-weight: 800; }
+    .d1 .hero-brand-big em { font-style: normal; color: #9fd4c4; }
+    .d1 .btn-primary { background: #e07a5f; color: #fff; }
+    .d1 .nav .logo { font-family: Syne, sans-serif; }
+
+    /* Direction 2 — Quiet paper + type hero */
+    .d2 {
+      background: #faf6f2;
+      color: #241522;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 110px;
+    }
+    .d2::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 50% at 85% 20%, rgba(74,39,68,0.08), transparent 60%),
+        radial-gradient(ellipse 50% 40% at 10% 90%, rgba(232,168,138,0.12), transparent 55%);
+      pointer-events: none;
+    }
+    .d2 .nav { color: #241522; }
+    .d2 .nav .links span { opacity: 0.55; color: #241522; }
+    .d2 .hero-brand-big {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 500;
+      font-size: clamp(3.5rem, 9vw, 5.5rem);
+      color: #241522;
+    }
+    .d2 .hero-brand-big i { font-style: italic; color: #4a2744; }
+    .d2 .hero-line {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      font-weight: 400;
+      color: #241522;
+    }
+    .d2 .hero-sub { color: #6e5d6a; opacity: 1; }
+    .d2 .btn-primary { background: #4a2744; color: #fff; }
+    .d2 .btn-ghost { border-color: #d0c2cb; color: #241522; }
+
+    /* Direction 3 — Full-bleed cinema, brand as stamp */
+    .d3 {
+      background:
+        linear-gradient(to top, rgba(10,10,12,0.88) 0%, rgba(10,10,12,0.25) 45%, rgba(10,10,12,0.35) 100%),
+        url("https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1600&q=80") center/cover;
+      justify-content: flex-end;
+      text-align: center;
+      align-items: center;
+    }
+    .d3 .hero-content { max-width: 640px; display: flex; flex-direction: column; align-items: center; }
+    .d3 .hero-brand-big {
+      font-family: Fraunces, Georgia, serif;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      margin-bottom: 14px;
+    }
+    .d3 .hero-line { max-width: 22ch; text-align: center; }
+    .d3 .hero-sub { text-align: center; }
+    .d3 .btn-primary { background: #fff; color: #111; }
+    .d3 .cta-row { justify-content: center; }
+
+    /* Direction 4 — Split panel modern */
+    .d4-wrap {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      min-height: 420px;
+    }
+    @media (max-width: 720px) {
+      .d4-wrap { grid-template-columns: 1fr; }
+    }
+    .d4-copy {
+      background: #0f1c1a;
+      color: #f4f0ea;
+      padding: 36px 32px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+    }
+    .d4-copy .nav-inline {
+      position: absolute;
+      top: 22px; left: 28px; right: 28px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      opacity: 0.85;
+    }
+    .d4-copy .logo {
+      font-family: Syne, sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+    .d4-brand {
+      font-family: Syne, sans-serif;
+      font-weight: 800;
+      font-size: clamp(2.6rem, 6vw, 4rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      margin: 0 0 16px;
+    }
+    .d4-brand span { color: #7eb8a8; }
+    .d4-line {
+      font-size: 1.2rem;
+      margin: 0 0 10px;
+      max-width: 24ch;
+      font-weight: 500;
+    }
+    .d4-sub { opacity: 0.75; margin: 0 0 20px; max-width: 36ch; font-size: 0.95rem; }
+    .d4-img {
+      background:
+        url("https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1200&q=80") center/cover;
+      min-height: 280px;
+    }
+    .d4 .btn-primary { background: #e07a5f; color: #fff; }
+
+    /* Direction 5 — Soft journey / India evening */
+    .d5 {
+      background:
+        linear-gradient(120deg, rgba(36,21,34,0.9) 0%, rgba(36,21,34,0.45) 50%, rgba(36,21,34,0.2) 100%),
+        url("https://images.unsplash.com/photo-1478144592103-25e218a580bb?auto=format&fit=crop&w=1600&q=80") center/cover;
+    }
+    .d5 .hero-brand-big {
+      font-family: Outfit, sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+    }
+    .d5 .hero-brand-big strong {
+      font-weight: 700;
+      color: #e8a88a;
+    }
+    .d5 .btn-primary { background: #e8a88a; color: #241522; }
+
+    .pick {
+      margin-top: 48px;
+      padding: 24px 28px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+    .pick h2 { margin: 0 0 10px; font-size: 1.15rem; }
+    .pick ol { margin: 0; padding-left: 1.2em; color: var(--mute); }
+    .pick li { margin-bottom: 8px; }
+    .pick strong { color: var(--ink); }
+    .footnote {
+      margin-top: 28px;
+      font-size: 0.85rem;
+      color: var(--mute);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="doc-kicker">Example only · not wired to the app</p>
+    <h1>How to show Elaris — and five modern website directions</h1>
+    <p class="lede">
+      Based on your product docs: Elaris is a verified relationship journey for India
+      (Delhi &amp; Bangalore first) — curated Meet, mutual Focus, enforced Together,
+      and a private Couple Space. The brand must feel intentional, not swipe-app.
+    </p>
+
+    <div class="product-card">
+      <h2>What the name needs to signal</h2>
+      <p>
+        <strong>Elaris</strong> should read as a calm, premium relationship brand —
+        closer to Hinge’s quiet confidence than to Tinder energy or Shaadi brochure tone.
+      </p>
+      <ul>
+        <li>Promise: <em>When you choose each other, we stop the search.</em></li>
+        <li>Tagline: Meet intentionally. Focus mutually. Grow privately.</li>
+        <li>Hero rule from docs: brand name is hero-level, not a tiny nav logo.</li>
+      </ul>
+      <div class="promise">“This isn’t another dating app — I get what happens when we choose each other.”</div>
+    </div>
+
+    <section>
+      <h2 class="sec-title">Monogram + caps · current color combination</h2>
+      <p class="sec-note">
+        Using your live tokens: plum <code>#4A2744</code>, deep plum <code>#2F1530</code>,
+        rose gold <code>#E8A88A</code>, warm paper <code>#FAF6F2</code>.
+        Rounded <strong>E</strong> mark + spaced <strong>ELARIS</strong> caps in Outfit.
+      </p>
+
+      <div class="mono-focus">
+        <div class="mono-focus-head">
+          <h3>Five lockup variants</h3>
+          <p>Same monogram system — different surfaces from the current palette.</p>
+        </div>
+        <div class="mono-variants">
+          <div class="mono-variant mv-paper">
+            <span class="tag">Paper</span>
+            <div class="lockup">
+              <span class="e-mark md">E</span>
+              <span class="caps-word md">Elaris</span>
+            </div>
+          </div>
+          <div class="mono-variant mv-plum">
+            <span class="tag">Plum fill</span>
+            <div class="lockup">
+              <span class="e-mark md">E</span>
+              <span class="caps-word md">Elaris</span>
+            </div>
+          </div>
+          <div class="mono-variant mv-dark">
+            <span class="tag">Outline mark</span>
+            <div class="lockup">
+              <span class="e-mark md">E</span>
+              <span class="caps-word md">Elaris</span>
+            </div>
+          </div>
+          <div class="mono-variant mv-blush">
+            <span class="tag">Accent muted</span>
+            <div class="lockup">
+              <span class="e-mark md">E</span>
+              <span class="caps-word md">Elaris</span>
+            </div>
+          </div>
+          <div class="mono-variant mv-header">
+            <span class="tag">Header row</span>
+            <div class="lockup row">
+              <span class="e-mark sm">E</span>
+              <span class="caps-word sm">Elaris</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-frame" style="margin-bottom:48px;">
+        <div class="hero-meta">
+          <h3>Hero trial — monogram + caps on plum dusk</h3>
+          <p>Big ELARIS under the E mark; small lockup stays in the nav.</p>
+        </div>
+        <div class="mono-hero">
+          <div class="mono-hero-nav">
+            <div class="nav-lockup">
+              <span class="e-mark">E</span>
+              <span class="caps-word">Elaris</span>
+            </div>
+            <div class="links"><span>How it works</span><span>Safety</span><span>Apply</span></div>
+          </div>
+          <div>
+            <div class="mono-hero-brand">
+              <span class="e-mark">E</span>
+              <span class="caps-word">Elaris</span>
+            </div>
+            <p class="hero-line">When you choose each other, we stop the search.</p>
+            <p class="hero-sub">Verified introductions for people who want something real — then a private space when you both choose.</p>
+            <div class="cta-row">
+              <span class="btn btn-primary">Apply for early access</span>
+              <span class="btn btn-ghost">How it works</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="sec-title">Other wordmark treatments (for comparison)</h2>
+      <p class="sec-note">
+        Keep spelling consistent as <strong>Elaris</strong>. Monogram + caps is featured above in your current colors.
+      </p>
+      <div class="grid">
+        <article class="card">
+          <div class="card-label">A · Editorial split</div>
+          <div class="card-title">El<em>aris</em> (serif + italic)</div>
+          <div class="stage wm-a">El<span class="aris">aris</span></div>
+          <p class="card-why">Closest to your current lockup. Soft, intimate, India-premium. Strong for hero + intro animation.</p>
+        </article>
+        <article class="card">
+          <div class="card-label">B · Monument</div>
+          <div class="card-title">Bold geometric wordmark</div>
+          <div class="stage wm-b">Ela<span>ris</span></div>
+          <p class="card-why">Modern Gen Z energy. Best if you want clearer distance from matrimony brands. Pair with teal ink surfaces.</p>
+        </article>
+        <article class="card">
+          <div class="card-label">C · Monogram + caps</div>
+          <div class="card-title">E mark + ELARIS (current colors)</div>
+          <div class="stage wm-c">
+            <div class="mono">E</div>
+            <div class="word">Elaris</div>
+          </div>
+          <p class="card-why">Rose-gold mark on plum. App-icon friendly; scale the caps up in the hero so branding stays strong.</p>
+        </article>
+        <article class="card">
+          <div class="card-label">D · Era underline</div>
+          <div class="card-title">Name + “era of togetherness”</div>
+          <div class="stage wm-d">
+            <div class="word">Elaris</div>
+            <div class="rule"></div>
+            <div class="sub">The era of togetherness</div>
+          </div>
+          <p class="card-why">Ties to your meta title line. Elegant for splash / intro; slightly formal for everyday nav.</p>
+        </article>
+        <article class="card">
+          <div class="card-label">E · Dual weight</div>
+          <div class="card-title">Light + accent weight</div>
+          <div class="stage wm-e"><span class="word">Ela<b>ris</b></span></div>
+          <p class="card-why">Feels product-y and contemporary. Good if plum / rose-gold tokens stay primary.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="sec-title">2. Modern website heroes (same promise, different feel)</h2>
+      <p class="sec-note">
+        Each keeps one composition: big brand · one headline · one support line · CTA group · one dominant visual.
+        No stats strips, floating badges, or card grids in the first viewport.
+      </p>
+
+      <div class="hero-grid">
+        <!-- D1 -->
+        <div class="hero-frame">
+          <div class="hero-meta">
+            <h3>Direction 1 — Editorial teal cinema</h3>
+            <p>Matches WEBSITE-OVERVIEW: Syne + teal + coral, full-bleed couple atmosphere.</p>
+          </div>
+          <div class="hero-stage d1">
+            <div class="nav">
+              <div class="logo">Elaris</div>
+              <div class="links"><span>How it works</span><span>Safety</span><span>Apply</span></div>
+            </div>
+            <div class="hero-content">
+              <p class="hero-brand-big">Ela<em>ris</em></p>
+              <p class="hero-line">When you choose each other, we stop the search.</p>
+              <p class="hero-sub">Verified introductions for people who want something real — then a private space when you both choose.</p>
+              <div class="cta-row">
+                <span class="btn btn-primary">Apply for early access</span>
+                <span class="btn btn-ghost">How it works</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- D2 -->
+        <div class="hero-frame">
+          <div class="hero-meta">
+            <h3>Direction 2 — Quiet paper typography</h3>
+            <p>Plum / warm paper from design-tokens. Brand is the art. Less photo, more confidence.</p>
+          </div>
+          <div class="hero-stage d2">
+            <div class="nav">
+              <div class="logo" style="font-family:'Cormorant Garamond',serif;font-size:1.25rem;">Elaris</div>
+              <div class="links"><span>How it works</span><span>Safety</span><span>Apply</span></div>
+            </div>
+            <div class="hero-content">
+              <p class="hero-brand-big">El<i>aris</i></p>
+              <p class="hero-line">When you choose each other, we stop showing you anyone else.</p>
+              <p class="hero-sub">A verified relationship journey for Delhi and Bangalore — fewer introductions, deeper conversations.</p>
+              <div class="cta-row">
+                <span class="btn btn-primary">Apply for early access</span>
+                <span class="btn btn-ghost">How it works</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- D3 -->
+        <div class="hero-frame">
+          <div class="hero-meta">
+            <h3>Direction 3 — Centered cinema stamp</h3>
+            <p>Brand as a quiet stamp over full-bleed life. Hinge-adjacent editorial calm.</p>
+          </div>
+          <div class="hero-stage d3">
+            <div class="nav">
+              <div class="logo">Elaris</div>
+              <div class="links"><span>How it works</span><span>Safety</span><span>Apply</span></div>
+            </div>
+            <div class="hero-content">
+              <p class="hero-brand-big">Elaris</p>
+              <p class="hero-line">Meet intentionally. Focus mutually. Grow privately.</p>
+              <p class="hero-sub">Curated starts. Mutual focus. A private home when you both say yes.</p>
+              <div class="cta-row">
+                <span class="btn btn-primary">Apply for early access</span>
+                <span class="btn btn-ghost">How it works</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- D4 -->
+        <div class="hero-frame">
+          <div class="hero-meta">
+            <h3>Direction 4 — Split panel modern</h3>
+            <p>Left: brand + promise. Right: real visual. Feels product-launch, still not a dashboard.</p>
+          </div>
+          <div class="d4-wrap d4">
+            <div class="d4-copy">
+              <div class="nav-inline">
+                <span class="logo">Elaris</span>
+                <span style="opacity:.65">How it works · Apply</span>
+              </div>
+              <p class="d4-brand">Ela<span>ris</span></p>
+              <p class="d4-line">When you choose each other, we stop the search.</p>
+              <p class="d4-sub">Verified people. Intentional introductions. Safer meetings — Delhi &amp; Bangalore first.</p>
+              <div class="cta-row">
+                <span class="btn btn-primary">Apply for early access</span>
+                <span class="btn btn-ghost">How it works</span>
+              </div>
+            </div>
+            <div class="d4-img" role="img" aria-label="Friends talking outdoors"></div>
+          </div>
+        </div>
+
+        <!-- D5 -->
+        <div class="hero-frame">
+          <div class="hero-meta">
+            <h3>Direction 5 — Warm plum dusk</h3>
+            <p>Uses current token story (plum + rose gold). Dual-weight name; soft Indian evening mood.</p>
+          </div>
+          <div class="hero-stage d5">
+            <div class="nav">
+              <div class="logo" style="font-family:Outfit,sans-serif;font-weight:600;letter-spacing:.06em;">ELARIS</div>
+              <div class="links"><span>How it works</span><span>Safety</span><span>Apply</span></div>
+            </div>
+            <div class="hero-content">
+              <p class="hero-brand-big">Ela<strong>ris</strong></p>
+              <p class="hero-line">Find someone worth choosing.</p>
+              <p class="hero-sub">Then Focus when it’s mutual — and go Together without the feed still hunting.</p>
+              <div class="cta-row">
+                <span class="btn btn-primary">Apply for early access</span>
+                <span class="btn btn-ghost">How it works</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="pick">
+      <h2>Practical recommendation (still just guidance)</h2>
+      <ol>
+        <li><strong>Monogram + caps (this trial):</strong> Best default surface is <strong>plum fill</strong> (rose-gold E on plum) or <strong>paper</strong> (plum E + dark caps). Use the <strong>header row</strong> lockup in the nav; scale the same system large in the hero.</li>
+        <li><strong>Hero:</strong> The monogram dusk trial above works if you want product-mark energy with your current colors. For quieter premium, still compare Direction 2.</li>
+        <li><strong>Always:</strong> Keep <em>ELARIS</em> large in the first viewport when using caps — don’t rely on the small E mark alone.</li>
+        <li><strong>Avoid:</strong> Tiny logo-only branding, purple-tech gradients, matrimony red/gold clichés, swipe-card hero grids.</li>
+      </ol>
+    </div>
+    <p class="footnote">
+      File: <code>docs/design/examples/elaris-branding-directions.html</code> · open in any browser.
+      No application code was changed.
+    </p>
+  </div>
+</body>
+</html>

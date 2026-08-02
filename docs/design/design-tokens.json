@@ -1,0 +1,87 @@
+{
+  "$schema": "ElAris design tokens v0.2",
+  "color": {
+    "brand": {
+      "primary": { "value": "#4A2744", "description": "Deep plum — commitment, depth" },
+      "primaryDark": { "value": "#2F1530" },
+      "primaryLight": { "value": "#F0E6EE" },
+      "accent": { "value": "#E8A88A", "description": "Rose gold — warmth, CTAs" },
+      "accentDeep": { "value": "#C97B5D" },
+      "accentMuted": { "value": "#F8EBE3" }
+    },
+    "surface": {
+      "background": { "value": "#FAF6F2", "description": "Warm paper" },
+      "card": { "value": "#FFFFFF" },
+      "overlay": { "value": "rgba(47, 21, 48, 0.48)" }
+    },
+    "text": {
+      "primary": { "value": "#241522" },
+      "secondary": { "value": "#4A3A48" },
+      "muted": { "value": "#6E5D6A" },
+      "inverse": { "value": "#FFFFFF" },
+      "link": { "value": "#4A2744" }
+    },
+    "semantic": {
+      "success": { "value": "#2D8A5E" },
+      "warning": { "value": "#D4A017" },
+      "error": { "value": "#C0392B" },
+      "verified": { "value": "#4A2744" },
+      "focus": { "value": "#C97B5D" },
+      "together": { "value": "#5C3356" }
+    },
+    "border": {
+      "default": { "value": "#E8DFE4" },
+      "strong": { "value": "#D0C2CB" }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "display": { "value": "Cormorant Garamond, Times New Roman, serif" },
+      "sans": { "value": "Outfit, system-ui, sans-serif" },
+      "sansHi": { "value": "Outfit, Noto Sans Devanagari, system-ui, sans-serif" }
+    },
+    "fontSize": {
+      "xs": { "value": "12px" },
+      "sm": { "value": "14px" },
+      "base": { "value": "16px" },
+      "lg": { "value": "18px" },
+      "xl": { "value": "20px" },
+      "2xl": { "value": "24px" },
+      "3xl": { "value": "30px" },
+      "4xl": { "value": "36px" }
+    },
+    "fontWeight": {
+      "regular": { "value": "400" },
+      "medium": { "value": "500" },
+      "semibold": { "value": "600" },
+      "bold": { "value": "700" }
+    },
+    "lineHeight": {
+      "normal": { "value": "1.5" },
+      "relaxed": { "value": "1.625" },
+      "hi": { "value": "1.7" }
+    }
+  },
+  "spacing": {
+    "1": { "value": "4px" },
+    "2": { "value": "8px" },
+    "3": { "value": "12px" },
+    "4": { "value": "16px" },
+    "6": { "value": "24px" },
+    "8": { "value": "32px" },
+    "12": { "value": "48px" },
+    "16": { "value": "64px" }
+  },
+  "radius": {
+    "sm": { "value": "8px" },
+    "md": { "value": "12px" },
+    "lg": { "value": "16px" },
+    "xl": { "value": "24px" },
+    "full": { "value": "9999px" }
+  },
+  "breakpoint": {
+    "mobile": { "value": "390px" },
+    "desktop": { "value": "1280px" },
+    "admin": { "value": "1440px" }
+  }
+}

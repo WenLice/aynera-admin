@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elaris — Logo + EL / ARIS (example)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --plum: #4a2744;
+      --plum-dark: #2f1530;
+      --rose: #e8a88a;
+      --paper: #faf6f2;
+      --ink: #241522;
+      --muted: #6e5d6a;
+      --white: #ffffff;
+      --line: #e8dfe4;
+      --font-display: "Cormorant Garamond", Georgia, serif;
+      --font-body: Outfit, system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.5;
+    }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 40px 20px 80px; }
+    .kicker {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 10px;
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      margin: 0 0 10px;
+      line-height: 1.15;
+    }
+    .lede {
+      color: var(--muted);
+      max-width: 54ch;
+      margin: 0 0 36px;
+    }
+
+    /* Current logo + EL (plum) + ARIS (white) — no color blocks */
+    .lockup {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+    .lockup.stacked {
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .lockup-mark {
+      display: block;
+      flex-shrink: 0;
+    }
+    .lockup-mark img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .lockup-name {
+      font-family: var(--font-body);
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      line-height: 1;
+      background: none;
+    }
+    .el {
+      color: var(--plum);
+      background: none;
+    }
+    .aris {
+      color: var(--white);
+      background: none;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      background: #fff;
+      margin-bottom: 22px;
+    }
+    .panel-meta {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+    .panel-meta h2 {
+      margin: 0 0 2px;
+      font-size: 1rem;
+    }
+    .panel-meta p {
+      margin: 0;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .stage {
+      min-height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 28px 20px;
+    }
+
+    /* Light-enough fields so plum EL reads; soft wash so white ARIS still shows */
+    .stage-mist {
+      background:
+        radial-gradient(ellipse 80% 70% at 50% 50%, rgba(74, 39, 68, 0.22), transparent 70%),
+        linear-gradient(180deg, #d8cfd6 0%, #c4b6c0 100%);
+    }
+    .stage-dusk {
+      background:
+        linear-gradient(165deg, #c9b8c4 0%, #8a6f82 45%, #5c3356 100%);
+    }
+    .stage-dark {
+      background: linear-gradient(165deg, #1a0c1c 0%, #2f1530 42%, #4a2744 100%);
+    }
+    .stage-hero {
+      min-height: 420px;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 36px;
+      color: var(--white);
+      background:
+        linear-gradient(115deg, rgba(47,21,48,0.88) 0%, rgba(74,39,68,0.45) 50%, rgba(47,21,48,0.22) 100%),
+        url("https://images.unsplash.com/photo-1478144592103-25e218a580bb?auto=format&fit=crop&w=1600&q=80") center/cover;
+      position: relative;
+    }
+    .stage-hero .nav {
+      position: absolute;
+      top: 20px; left: 24px; right: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+    .stage-hero .nav .links { display: flex; gap: 16px; opacity: 0.75; }
+    .hero-copy { max-width: 34rem; }
+    .hero-copy h3 {
+      margin: 0 0 10px;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+      line-height: 1.2;
+    }
+    .hero-copy p {
+      margin: 0 0 18px;
+      opacity: 0.88;
+      max-width: 40ch;
+    }
+    .btns { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn {
+      display: inline-flex;
+      padding: 11px 16px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .btn-primary { background: var(--rose); color: var(--plum-dark); }
+    .btn-ghost {
+      border: 1px solid rgba(255,255,255,0.45);
+      color: #fff;
+    }
+
+    .header-mock {
+      width: 100%;
+      max-width: 880px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 8px;
+    }
+    .header-mock .links {
+      display: flex;
+      gap: 18px;
+      font-size: 0.88rem;
+      color: rgba(36, 21, 34, 0.7);
+    }
+
+    .note {
+      margin-top: 28px;
+      padding: 16px 18px;
+      border-radius: 12px;
+      background: #fff;
+      border: 1px solid var(--line);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .note strong { color: var(--ink); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="kicker">Example only · app code unchanged</p>
+    <h1>Current logo + EL / ARIS</h1>
+    <p class="lede">
+      Existing mark + caps wordmark only — <strong>EL</strong> in primary plum,
+      <strong>ARIS</strong> in white. No chips, pills, or color blocks behind the letters.
+    </p>
+
+    <div class="panel">
+      <div class="panel-meta">
+        <h2>1 · Header</h2>
+        <p>Logo + plain ELARIS text. Mid mist surface so both plum and white can read.</p>
+      </div>
+      <div class="stage stage-mist">
+        <div class="header-mock">
+          <div class="lockup" aria-label="Elaris">
+            <span class="lockup-mark" style="width:32px;height:32px">
+              <img src="../../../apps/elaris-web/public/logo-mark.svg" alt="" width="32" height="32" />
+            </span>
+            <span class="lockup-name" style="font-size:1.05rem">
+              <span class="el">EL</span><span class="aris">ARIS</span>
+            </span>
+          </div>
+          <div class="links">
+            <span>How it works</span>
+            <span>Safety</span>
+            <span>Apply</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-meta">
+        <h2>2 · Intro splash</h2>
+        <p>Same logo. Flat type — EL plum, ARIS white — no blocks.</p>
+      </div>
+      <div class="stage stage-dusk" style="min-height:280px;flex-direction:column;gap:8px">
+        <div class="lockup stacked" aria-label="Elaris">
+          <span class="lockup-mark" style="width:72px;height:72px">
+            <img src="../../../apps/elaris-web/public/logo-mark.svg" alt="" width="72" height="72" />
+          </span>
+          <span class="lockup-name" style="font-size:1.75rem">
+            <span class="el">EL</span><span class="aris">ARIS</span>
+          </span>
+        </div>
+        <p style="margin:10px 0 0;color:rgba(250,246,242,0.9);font-size:0.95rem">
+          The Era of Togetherness.
+        </p>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-meta">
+        <h2>3 · Dark plum (literal)</h2>
+        <p>No blocks. White ARIS is strong; plum EL is quieter on deep plum.</p>
+      </div>
+      <div class="stage stage-dark">
+        <div class="lockup" aria-label="Elaris">
+          <span class="lockup-mark" style="width:40px;height:40px">
+            <img src="../../../apps/elaris-web/public/logo-mark.svg" alt="" width="40" height="40" />
+          </span>
+          <span class="lockup-name" style="font-size:1.2rem">
+            <span class="el">EL</span><span class="aris">ARIS</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-meta">
+        <h2>4 · Hero</h2>
+        <p>Nav + hero brand — still no color blocks behind ELARIS.</p>
+      </div>
+      <div class="stage stage-hero">
+        <div class="nav">
+          <div class="lockup" aria-label="Elaris">
+            <span class="lockup-mark" style="width:28px;height:28px">
+              <img src="../../../apps/elaris-web/public/logo-mark.svg" alt="" width="28" height="28" />
+            </span>
+            <span class="lockup-name" style="font-size:0.85rem">
+              <span class="el">EL</span><span class="aris">ARIS</span>
+            </span>
+          </div>
+          <div class="links"><span>How it works</span><span>Safety</span><span>Apply</span></div>
+        </div>
+        <div class="hero-copy">
+          <div class="lockup stacked" style="align-items:flex-start;margin-bottom:18px" aria-label="Elaris">
+            <span class="lockup-mark" style="width:56px;height:56px">
+              <img src="../../../apps/elaris-web/public/logo-mark.svg" alt="" width="56" height="56" />
+            </span>
+            <span class="lockup-name" style="font-size:clamp(1.8rem,5vw,2.6rem)">
+              <span class="el">EL</span><span class="aris">ARIS</span>
+            </span>
+          </div>
+          <h3>When you choose each other, we stop the search.</h3>
+          <p>Verified introductions for people who want something real — then a private space when you both choose.</p>
+          <div class="btns">
+            <span class="btn btn-primary">Apply for early access</span>
+            <span class="btn btn-ghost">How it works</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="note">
+      <strong>Updated:</strong> no chips or blocks behind the wordmark — only letter color.
+      File: <code>docs/design/examples/elaris-el-aris-lockup.html</code>
+    </p>
+  </div>
+</body>
+</html>
