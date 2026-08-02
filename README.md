@@ -1,38 +1,22 @@
 # elaris-admin
 
-Staff admin panel for ElAris (`admin.elaris.com`) and **system of record for all documentation**.
+Staff admin panel for ElAris (`admin.elaris.com`) and the **system of record for all documentation**.
 
-## App
+## Layout
 
-React + Vite SPA — applicant review, curator workspace, cohorts, safety.
+| Path | Purpose |
+|------|---------|
+| `src/` | Admin application code |
+| `docs/` | All product, engineering, operations, and sensitive documents |
 
-```text
-src/
-  pages/
-  components/
-  api/
-  auth/          # staff JWT + TOTP
-  types/
-```
+## Docs index
 
-## Docs (all documents live here)
+See [docs/README.md](./docs/README.md) and [docs/structure.md](./docs/structure.md).
 
-```text
-docs/
-  product/           # Specs, matchmaking, screen maps, build order
-  engineering/       # Architecture, ADRs, API notes
-  operations/        # Cohort / safety runbooks
-  legal-safety/      # Internal policy notes
-  sensitive/         # Rubrics, admission guides (private repo)
-  design/            # Design briefs, tokens, examples
-```
-
-## Auth
-
-Staff: email + password + TOTP. JWT audience `staff`.
-
-## Next
+## Quick start
 
 ```bash
 npm create vite@latest . -- --template react-ts
 ```
+
+Keep UI code under `src/`.
