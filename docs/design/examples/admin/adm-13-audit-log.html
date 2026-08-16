@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADM-13 · Audit log — ElAris Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-shared.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" data-active="audit"></aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb">Audit / <strong>Log</strong></div>
+        <div class="topbar-actions">
+          <input class="search" type="search" placeholder="Correlation or subject…" />
+          <div class="admin-chip"><span class="admin-avatar">AK</span> Asha K. · Staff</div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="page-head">
+          <div>
+            <h1>Audit log</h1>
+            <p>Sensitive actions only — no OTP codes, tokens, or raw PII in detail columns.</p>
+          </div>
+        </div>
+
+        <div class="filters">
+          <div class="field"><label>Actor</label><input type="text" placeholder="Staff name" /></div>
+          <div class="field"><label>Action</label>
+            <select>
+              <option selected>All</option>
+              <option>ApplicantDecision</option>
+              <option>IntroductionCreated</option>
+              <option>SafetyAction</option>
+              <option>CohortControl</option>
+            </select>
+          </div>
+          <div class="field"><label>Subject</label><input type="text" placeholder="Member or case ID" /></div>
+          <div class="field"><label>From</label><input type="date" value="2026-08-01" /></div>
+          <div class="field"><label>To</label><input type="date" value="2026-08-09" /></div>
+          <button class="btn btn-secondary" type="button">Apply</button>
+        </div>
+
+        <section class="panel">
+          <div class="table-wrap">
+            <table class="data">
+              <thead>
+                <tr>
+                  <th>Timestamp (UTC)</th>
+                  <th>Actor</th>
+                  <th>Action</th>
+                  <th>Subject</th>
+                  <th>Reason</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="cell-muted">2026-08-09 03:48</td>
+                  <td>Nisha S.</td>
+                  <td><span class="chip danger">SafetyAction</span></td>
+                  <td>SAFE-1042 / Vikram</td>
+                  <td>Restrict messaging</td>
+                  <td><a class="btn btn-ghost btn-sm" href="adm-11-safety-case.html">View</a></td>
+                </tr>
+                <tr>
+                  <td class="cell-muted">2026-08-08 14:12</td>
+                  <td>Rhea L.</td>
+                  <td><span class="chip info">IntroductionCreated</span></td>
+                  <td>INTRO-8841</td>
+                  <td>Curated · reciprocal OK</td>
+                  <td><a class="btn btn-ghost btn-sm" href="adm-09-introduction-detail.html">View</a></td>
+                </tr>
+                <tr>
+                  <td class="cell-muted">2026-08-07 11:05</td>
+                  <td>Asha K.</td>
+                  <td><span class="chip success">ApplicantDecision</span></td>
+                  <td>Meera</td>
+                  <td>Approve · activate</td>
+                  <td><a class="btn btn-ghost btn-sm" href="adm-04-applicant-detail.html">View</a></td>
+                </tr>
+                <tr>
+                  <td class="cell-muted">2026-08-07 09:40</td>
+                  <td>Dev M.</td>
+                  <td><span class="chip warning">CohortControl</span></td>
+                  <td>Delhi · Women 28–32</td>
+                  <td>Set Controlled</td>
+                  <td><a class="btn btn-ghost btn-sm" href="adm-06-cohort-dashboard.html">View</a></td>
+                </tr>
+                <tr>
+                  <td class="cell-muted">2026-08-05 16:22</td>
+                  <td>Asha K.</td>
+                  <td><span class="chip success">ApplicantDecision</span></td>
+                  <td>Isha</td>
+                  <td>Approve · waitlist</td>
+                  <td><a class="btn btn-ghost btn-sm" href="adm-05-professionals-review.html">View</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="admin-nav.js"></script>
+</body>
+</html>

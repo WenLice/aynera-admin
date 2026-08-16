@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADM-20 · Relationship oversight — ElAris Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-shared.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" data-active="relationships"></aside>
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb">Supply / <strong>Relationships</strong></div>
+        <div class="topbar-actions">
+          <input class="search" type="search" placeholder="Pair or member…" />
+          <div class="admin-chip"><span class="admin-avatar">NS</span> Nisha S. · Safety</div>
+        </div>
+      </header>
+      <div class="content">
+        <div class="page-head">
+          <div>
+            <h1>Relationship oversight</h1>
+            <p>Read-first view of Meet / Focus / Together. Break-glass ends states for safety.</p>
+          </div>
+        </div>
+
+        <div class="banner danger" style="margin-bottom:16px;">
+          Break-glass actions notify both members with a neutral safety message. Private declines stay private unless safety requires otherwise.
+        </div>
+
+        <div class="filters">
+          <div class="field"><label>State</label><select><option>All</option><option selected>Focus</option><option>Together</option><option>Matched chat</option></select></div>
+          <div class="field"><label>City</label><select><option selected>All</option><option>Delhi</option><option>Bangalore</option></select></div>
+          <button class="btn btn-secondary" type="button">Apply</button>
+        </div>
+
+        <section class="panel" style="margin-bottom:16px;">
+          <div class="table-wrap">
+            <table class="data">
+              <thead><tr><th>Pair</th><th>State</th><th>Since</th><th>Date plan</th><th>Flags</th><th></th></tr></thead>
+              <tbody>
+                <tr>
+                  <td class="cell-strong">Priya ↔ Arjun</td>
+                  <td><span class="chip info">Matched</span></td>
+                  <td>4 Aug</td>
+                  <td>6 Aug cafe</td>
+                  <td><span class="chip danger">Linked SAFE-1042</span></td>
+                  <td><button class="btn btn-ghost btn-sm" type="button">Open</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">Isha ↔ Kabir</td>
+                  <td><span class="chip" style="background:#f8ebe3;color:#c97b5d;">Focus 30d</span></td>
+                  <td>1 Aug</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td><button class="btn btn-ghost btn-sm" type="button">Open</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">Meera ↔ Dev</td>
+                  <td><span class="chip" style="background:#ebe4f0;color:#5c3356;">Together</span></td>
+                  <td>20 Jul</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td><button class="btn btn-ghost btn-sm" type="button">Open</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel panel-pad">
+          <h3 style="margin:0 0 12px; font-size:14px;">Selected · Priya ↔ Arjun</h3>
+          <div class="grid-2">
+            <div class="stack">
+              <div class="metric-row"><span>State</span><strong>Matched chat</strong></div>
+              <div class="metric-row"><span>Intro</span><strong><a href="adm-09-introduction-detail.html">INTRO-8841</a></strong></div>
+              <div class="metric-row"><span>Messages (count only)</span><strong>46</strong></div>
+              <div class="metric-row"><span>Share Date used</span><strong>Yes</strong></div>
+              <div class="banner info">Message content visible only when attached to an open safety case.</div>
+            </div>
+            <div class="danger-zone">
+              <h4 style="margin:0 0 8px; color:var(--error);">Break-glass</h4>
+              <div class="field"><label>Action</label>
+                <select>
+                  <option>End match / archive chat</option>
+                  <option>Force end Focus</option>
+                  <option>Force leave Together + cooling-off</option>
+                  <option>Block pair permanently</option>
+                </select>
+              </div>
+              <div class="field" style="margin-top:10px;"><label>Reason (required)</label><textarea>Linked to SAFE-1042 — reporter safety.</textarea></div>
+              <button class="btn btn-danger" type="button" style="margin-top:12px;">Execute &amp; audit</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="admin-nav.js"></script>
+</body>
+</html>

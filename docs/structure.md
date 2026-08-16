@@ -2,15 +2,21 @@
 
 ```text
 elaris-admin/
-├── src/                    # Admin application code
+├── src/                    # Admin application (Vite + React + TypeScript)
 │   ├── pages/
 │   ├── components/
 │   ├── api/
 │   ├── auth/
-│   └── types/
+│   ├── types/
+│   └── styles/
 ├── docs/                   # All ElAris documentation (system of record)
 │   ├── product/
 │   ├── engineering/
+│   │   ├── architecture.md
+│   │   ├── frontend.md          # Cross-client frontend overview
+│   │   ├── admin-developer-guide.md
+│   │   ├── adr/
+│   │   └── backend/             # Auth, logging, middleware, future features
 │   ├── operations/
 │   ├── legal-safety/
 │   ├── sensitive/

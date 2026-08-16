@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADM-23 · System controls — ElAris Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-shared.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" data-active="system"></aside>
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb">Command / <strong>System controls</strong></div>
+        <div class="topbar-actions">
+          <div class="admin-chip"><span class="admin-avatar">AK</span> Founder admin</div>
+        </div>
+      </header>
+      <div class="content">
+        <div class="page-head">
+          <div>
+            <h1>System controls</h1>
+            <p>Kill-switches and feature gates. Changes require reason + audit.</p>
+          </div>
+        </div>
+
+        <div class="banner warn" style="margin-bottom:16px;">
+          Turning off discovery or apply does not delete data. Members see honest paused states — never fake emptiness.
+        </div>
+
+        <div class="grid-2">
+          <section class="panel panel-pad">
+            <h3 style="margin:0 0 8px; font-size:14px;">Global switches</h3>
+            <div class="toggle-row">
+              <div><div class="cell-strong">Public apply open</div><div class="tiny muted">Website apply / waitlist intake</div></div>
+              <button class="toggle on" type="button"></button>
+            </div>
+            <div class="toggle-row">
+              <div><div class="cell-strong">New introductions</div><div class="tiny muted">Curator deliveries pause if off</div></div>
+              <button class="toggle on" type="button"></button>
+            </div>
+            <div class="toggle-row">
+              <div><div class="cell-strong">Focus / Together requests</div><div class="tiny muted">Existing states continue</div></div>
+              <button class="toggle on" type="button"></button>
+            </div>
+            <div class="toggle-row">
+              <div><div class="cell-strong">New registrations (OTP)</div><div class="tiny muted">Emergency freeze</div></div>
+              <button class="toggle on" type="button"></button>
+            </div>
+            <div class="toggle-row">
+              <div><div class="cell-strong">Professionals applications</div><div class="tiny muted">Core can stay open</div></div>
+              <button class="toggle on" type="button"></button>
+            </div>
+          </section>
+
+          <section class="panel panel-pad">
+            <h3 style="margin:0 0 8px; font-size:14px;">City kill-switches</h3>
+            <div class="toggle-row">
+              <div><div class="cell-strong">Delhi cohort live</div><div class="tiny muted">Admissions + intros</div></div>
+              <button class="toggle on" type="button"></button>
+            </div>
+            <div class="toggle-row">
+              <div><div class="cell-strong">Bangalore cohort live</div><div class="tiny muted">Admissions + intros</div></div>
+              <button class="toggle on" type="button"></button>
+            </div>
+            <div class="toggle-row">
+              <div><div class="cell-strong">Maintenance banner</div><div class="tiny muted">Show on app.elaris.com</div></div>
+              <button class="toggle" type="button"></button>
+            </div>
+            <hr class="hr" />
+            <div class="field"><label>Change reason (required)</label><textarea placeholder="Why this switch is changing…"></textarea></div>
+            <button class="btn btn-primary" type="button" style="margin-top:12px;">Save controls</button>
+          </section>
+        </div>
+
+        <section class="danger-zone" style="margin-top:16px;">
+          <h3 style="margin:0 0 8px; font-size:14px; color:var(--error);">Emergency freeze</h3>
+          <p class="tiny muted" style="margin:0 0 12px;">Disables apply, intros, and new chats. Existing Together pairs keep Couple Space read access.</p>
+          <button class="btn btn-danger" type="button">Activate platform freeze</button>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="admin-nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADM-16 · Member control — ElAris Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-shared.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" data-active="member-control"></aside>
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb">Growth / <strong>Member control</strong></div>
+        <div class="topbar-actions">
+          <input class="search" type="search" placeholder="Name, phone mask, member ID…" value="Priya" />
+          <div class="admin-chip"><span class="admin-avatar">NS</span> Nisha S. · Safety</div>
+        </div>
+      </header>
+      <div class="content">
+        <div class="page-head">
+          <div>
+            <h1>Member control · Priya</h1>
+            <p>Force levers for support &amp; safety. Every action writes AuditEvents.</p>
+          </div>
+          <div class="page-actions">
+            <a class="btn btn-secondary btn-sm" href="adm-07-member-detail.html">Read-only profile</a>
+            <a class="btn btn-secondary btn-sm" href="adm-20-relationship-oversight.html">Relationships</a>
+          </div>
+        </div>
+
+        <div class="power-bar">
+          <span class="label">Break-glass</span>
+          <button class="btn btn-accent" type="button">Pause discovery</button>
+          <button class="btn btn-secondary" type="button">Force re-verify</button>
+          <button class="btn btn-secondary" type="button">Close all matches</button>
+          <button class="btn btn-danger" type="button">Suspend account</button>
+        </div>
+
+        <div class="grid-2">
+          <section class="panel panel-pad">
+            <h3 style="margin:0 0 8px; font-size:14px;">Account levers</h3>
+            <div class="toggle-row">
+              <div><div class="cell-strong">Account active</div><div class="tiny muted">Off = cannot login</div></div>
+              <button class="toggle on" type="button" aria-label="Active"></button>
+            </div>
+            <div class="toggle-row">
+              <div><div class="cell-strong">Discovery eligible</div><div class="tiny muted">Receive curated intros</div></div>
+              <button class="toggle on" type="button"></button>
+            </div>
+            <div class="toggle-row">
+              <div><div class="cell-strong">Messaging allowed</div><div class="tiny muted">Existing matches only if on</div></div>
+              <button class="toggle on" type="button"></button>
+            </div>
+            <div class="toggle-row">
+              <div><div class="cell-strong">Shadow restrict</div><div class="tiny muted">Reduce intros silently</div></div>
+              <button class="toggle" type="button"></button>
+            </div>
+          </section>
+
+          <section class="panel panel-pad">
+            <h3 style="margin:0 0 12px; font-size:14px;">Support actions</h3>
+            <div class="stack-sm">
+              <button class="btn btn-secondary btn-block" type="button">Reset sessions (logout all devices)</button>
+              <button class="btn btn-secondary btn-block" type="button">Trigger email verification resend</button>
+              <button class="btn btn-secondary btn-block" type="button">Request additional profile info</button>
+              <button class="btn btn-secondary btn-block" type="button">Move Core ↔ Professionals path</button>
+              <button class="btn btn-secondary btn-block" type="button">Cap intros (override cohort default)</button>
+            </div>
+            <div class="field" style="margin-top:12px;">
+              <label>Intro cap this week</label>
+              <input type="number" value="2" min="0" max="7" />
+            </div>
+          </section>
+
+          <section class="danger-zone">
+            <h3 style="margin:0 0 8px; font-size:14px; color:var(--error);">Danger zone</h3>
+            <p class="tiny muted" style="margin:0 0 12px;">Requires reason category + confirmation. Audited.</p>
+            <div class="field"><label>Reason</label>
+              <select><option>Safety enforcement</option><option>Terms violation</option><option>Member request</option><option>Fraud / fake</option></select>
+            </div>
+            <div class="row" style="margin-top:12px;">
+              <button class="btn btn-danger" type="button">Suspend</button>
+              <button class="btn btn-danger" type="button">Soft-delete account</button>
+              <button class="btn btn-danger" type="button">Process deletion request</button>
+            </div>
+          </section>
+
+          <section class="panel panel-pad">
+            <h3 style="margin:0 0 10px; font-size:14px;">Masked identity</h3>
+            <div class="metric-row"><span>Phone</span><strong>+91******3210</strong></div>
+            <div class="metric-row"><span>Email</span><strong>p***@mail.example</strong></div>
+            <div class="metric-row"><span>Member ID</span><strong>mem_8f2a…</strong></div>
+            <p class="tiny muted" style="margin:12px 0 0;">Full values never shown in UI or logs.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="admin-nav.js"></script>
+</body>
+</html>

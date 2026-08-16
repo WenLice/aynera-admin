@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADM-01 · Login — ElAris Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-shared.css" />
+</head>
+<body>
+  <div class="login-page">
+    <div class="login-card">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div class="brand-text">
+          <div class="brand-name"><span class="el">El</span><span class="aris">Aris</span></div>
+          <div class="brand-sub" style="color:var(--muted)">Staff portal</div>
+        </div>
+      </div>
+      <h1>Sign in</h1>
+      <p class="lead">Moderator access for review, cohorts, and safety.</p>
+
+      <form class="stack" action="adm-02-dashboard.html" method="get">
+        <div class="field">
+          <label for="email">Work email</label>
+          <input id="email" type="email" value="ops@elaris.example" autocomplete="username" />
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" value="••••••••••••" autocomplete="current-password" />
+        </div>
+        <div class="field">
+          <label for="mfa">Authenticator code</label>
+          <input id="mfa" type="text" inputmode="numeric" placeholder="6-digit MFA" value="482913" />
+        </div>
+        <button class="btn btn-primary btn-block" type="submit" style="height:42px; margin-top:4px;">Continue to dashboard</button>
+      </form>
+
+      <p class="login-meta">MFA required for all staff · Mockup only</p>
+      <p class="login-meta"><a href="index.html" style="color:var(--plum); font-weight:600;">← Gallery</a></p>
+    </div>
+  </div>
+</body>
+</html>

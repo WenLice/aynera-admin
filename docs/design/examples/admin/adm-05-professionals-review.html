@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADM-05 · Professionals review — ElAris Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-shared.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" data-active="applicants"></aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb"><a href="adm-03-applicant-queue.html">Applicants</a> / <strong>Rohan · Professionals</strong></div>
+        <div class="topbar-actions">
+          <input class="search" type="search" placeholder="Search…" />
+          <div class="admin-chip"><span class="admin-avatar">AK</span> Asha K. · Reviewer</div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="page-head">
+          <div>
+            <h1>Rohan <span class="chip pro" style="vertical-align:middle; margin-left:6px;">Professionals</span></h1>
+            <p>Bangalore · Age 33 · Salaried · Manual workplace review</p>
+          </div>
+          <div class="page-actions">
+            <span class="chip success">Core checks passed</span>
+            <span class="chip warning">Professionals pending</span>
+          </div>
+        </div>
+
+        <div class="banner info" style="margin-bottom:16px;">
+          Never display employer prestige, salary, or member class. Admission is authenticity, activity, intent, profile effort, and cohort fit.
+        </div>
+
+        <div class="split">
+          <div class="stack">
+            <section class="panel panel-pad">
+              <h3 style="margin:0 0 12px; font-size:14px;">Professional context</h3>
+              <div class="grid-2" style="gap:12px;">
+                <div><div class="tiny muted">Category</div><div class="cell-strong">Salaried</div></div>
+                <div><div class="tiny muted">Role</div><div class="cell-strong">Product manager</div></div>
+                <div><div class="tiny muted">Field</div><div class="cell-strong">Technology</div></div>
+                <div><div class="tiny muted">Work pattern</div><div class="cell-strong">Hybrid · travel quarterly</div></div>
+                <div><div class="tiny muted">Verification method</div><div class="cell-strong">Manual employment review</div></div>
+                <div><div class="tiny muted">Method result</div><div><span class="chip warning">Awaiting decision</span></div></div>
+              </div>
+            </section>
+
+            <section class="panel panel-pad">
+              <h3 style="margin:0 0 12px; font-size:14px;">Evidence viewer</h3>
+              <div class="evidence-box">
+                Secure evidence preview · redacted · no download<br />
+                <span class="tiny">Document · employment confirmation (compensation removed)</span>
+              </div>
+              <p class="tiny muted" style="margin:12px 0 0;">Evidence deletion state: retained until review + dispute window ends.</p>
+            </section>
+
+            <section class="panel panel-pad">
+              <h3 style="margin:0 0 8px; font-size:14px;">Career direction (member-facing later)</h3>
+              <p style="margin:0; font-size:13.5px;">Building products with small teams; wants a partner who understands uneven weeks and values presence when home.</p>
+            </section>
+          </div>
+
+          <aside class="stack sticky-rail">
+            <section class="panel panel-pad">
+              <h3 style="margin:0 0 12px; font-size:14px;">Admission checklist</h3>
+              <ul class="check-list">
+                <li><input type="checkbox" checked disabled /> Active professional identity verified</li>
+                <li><input type="checkbox" checked disabled /> Category / role / field complete</li>
+                <li><input type="checkbox" checked disabled /> Career answers show effort</li>
+                <li><input type="checkbox" disabled /> Intent fits Professionals cohort</li>
+                <li><input type="checkbox" disabled /> City cohort has capacity</li>
+              </ul>
+              <hr class="hr" />
+              <div class="field">
+                <label>Internal notes</label>
+                <textarea>Evidence authentic. Confirm BLR men 30–35 capacity before activate.</textarea>
+              </div>
+              <div class="stack-sm" style="margin-top:14px;">
+                <button class="btn btn-accent btn-block" type="button">Eligible · activate</button>
+                <button class="btn btn-secondary btn-block" type="button">Eligible · waitlist</button>
+                <button class="btn btn-secondary btn-block" type="button">Request more evidence</button>
+                <button class="btn btn-danger btn-block" type="button">Not currently eligible</button>
+                <a class="btn btn-ghost btn-block" href="adm-04-applicant-detail.html">← Core profile view</a>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="admin-nav.js"></script>
+</body>
+</html>

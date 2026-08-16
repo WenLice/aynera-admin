@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADM-08 · Curator workspace — ElAris Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-shared.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" data-active="curator"></aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb">Curator / <strong>Workspace</strong></div>
+        <div class="topbar-actions">
+          <input class="search" type="search" placeholder="Find member…" />
+          <div class="admin-chip"><span class="admin-avatar">RL</span> Rhea L. · Curator</div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="page-head">
+          <div>
+            <h1>Match curator workspace</h1>
+            <p>Create introductions with reciprocal filters and honest member-facing reasons.</p>
+          </div>
+          <div class="page-actions"><span class="chip warning">9 awaiting action</span></div>
+        </div>
+
+        <div class="split-wide">
+          <section class="panel panel-pad">
+            <div class="row" style="justify-content:space-between; margin-bottom:14px;">
+              <h3 style="margin:0; font-size:14px;">Member A · Priya</h3>
+              <a class="btn btn-ghost btn-sm" href="adm-07-member-detail.html">Open profile</a>
+            </div>
+            <div class="row" style="margin-bottom:12px;">
+              <span class="chip core">Core</span>
+              <span class="chip">Delhi</span>
+              <span class="chip">28</span>
+              <span class="chip">Relationship ready</span>
+            </div>
+            <dl class="prompt" style="margin-bottom:10px;">
+              <dt>Looking for</dt>
+              <dd>Calm evenings, clear communication, shared city life.</dd>
+            </dl>
+            <p class="tiny muted" style="margin:0 0 8px;">Hard filters: age 27–34 · non-smoker · Delhi NCR</p>
+            <p class="tiny muted" style="margin:0;">Exposure: 2 intros last 30 days · 1 active match</p>
+          </section>
+
+          <section class="panel panel-pad">
+            <h3 style="margin:0 0 12px; font-size:14px;">Suggested candidates</h3>
+
+            <div class="candidate" style="border-color:var(--rose); background:linear-gradient(180deg,#fffaf6,#fff);">
+              <div class="avatar-lg"></div>
+              <div>
+                <div class="cell-strong">Arjun · 31</div>
+                <div class="tiny muted">Hard filters ✓ · Similar pace · Compatible plans</div>
+                <div class="row" style="margin-top:6px;">
+                  <span class="chip success">Reciprocal OK</span>
+                  <span class="chip warning">Tension: travel weeks</span>
+                </div>
+              </div>
+              <span class="chip accent" style="background:var(--rose-muted); color:var(--rose-deep);">Selected</span>
+            </div>
+
+            <div class="candidate">
+              <div class="avatar-lg"></div>
+              <div>
+                <div class="cell-strong">Kabir · 30</div>
+                <div class="tiny muted">Hard filters ✓ · Already passed privately</div>
+              </div>
+              <span class="chip neutral">Hold</span>
+            </div>
+
+            <div class="candidate">
+              <div class="avatar-lg"></div>
+              <div>
+                <div class="cell-strong">Dev · 29</div>
+                <div class="tiny muted">Hard filters ✗ age band</div>
+              </div>
+              <span class="chip danger">Do not introduce</span>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel panel-pad" style="margin-top:16px;">
+          <h3 style="margin:0 0 12px; font-size:14px;">Introduction reasons · Priya ↔ Arjun</h3>
+          <div class="grid-2">
+            <div class="stack">
+              <div class="field">
+                <label>Member-facing reasons (shown to both)</label>
+                <textarea>Similar social pace · Both want a serious relationship in Delhi · Compatible weekend rhythm</textarea>
+              </div>
+              <div class="field">
+                <label>Internal: risks / uncertainties</label>
+                <textarea>Arjun travels quarterly — flag in curator notes only.</textarea>
+              </div>
+            </div>
+            <div class="stack">
+              <div class="banner info">Do not invent compatibility percentages. Reasons must be understandable and honest.</div>
+              <div class="row">
+                <button class="btn btn-accent" type="button">Introduce</button>
+                <button class="btn btn-secondary" type="button">Hold</button>
+                <button class="btn btn-secondary" type="button">Clarify</button>
+                <button class="btn btn-danger" type="button">Do not introduce</button>
+              </div>
+              <a class="btn btn-ghost btn-sm" href="adm-09-introduction-detail.html">Preview introduction detail →</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="admin-nav.js"></script>
+</body>
+</html>

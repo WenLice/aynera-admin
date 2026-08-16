@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADM-10 · Safety queue — ElAris Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-shared.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" data-active="safety"></aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb">Safety / <strong>Queue</strong></div>
+        <div class="topbar-actions">
+          <input class="search" type="search" placeholder="Search case ID…" />
+          <div class="admin-chip"><span class="admin-avatar">NS</span> Nisha S. · Safety</div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="page-head">
+          <div>
+            <h1>Safety queue</h1>
+            <p>Sorted by severity, then SLA. ElAris is not an emergency-response service.</p>
+          </div>
+          <div class="page-actions">
+            <span class="chip danger">1 urgent</span>
+            <span class="chip warning">3 open</span>
+          </div>
+        </div>
+
+        <div class="filters">
+          <div class="field"><label>Severity</label><select><option selected>All</option><option>Urgent</option><option>High</option><option>Standard</option></select></div>
+          <div class="field"><label>Category</label><select><option selected>All</option><option>Felt unsafe on a date</option><option>Harassment</option><option>Scam</option><option>Fake profile</option></select></div>
+          <div class="field"><label>Status</label><select><option selected>Open</option><option>In progress</option><option>Escalated</option><option>Closed</option></select></div>
+          <div class="field"><label>Assignee</label><select><option selected>Any</option><option>Nisha S.</option><option>Unassigned</option></select></div>
+          <button class="btn btn-secondary" type="button">Apply</button>
+        </div>
+
+        <section class="panel">
+          <div class="table-wrap">
+            <table class="data">
+              <thead>
+                <tr>
+                  <th>Case</th>
+                  <th>Severity</th>
+                  <th>Category</th>
+                  <th>SLA</th>
+                  <th>Assignee</th>
+                  <th>Status</th>
+                  <th>Opened</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="clickable" onclick="location.href='adm-11-safety-case.html'">
+                  <td class="cell-strong">SAFE-1042</td>
+                  <td><span class="chip danger">Urgent</span></td>
+                  <td>Felt unsafe on a date</td>
+                  <td class="cell-strong" style="color:var(--error);">Breach risk · 2h</td>
+                  <td>Nisha S.</td>
+                  <td><span class="chip warning">In progress</span></td>
+                  <td>9 Aug</td>
+                </tr>
+                <tr class="clickable" onclick="location.href='adm-11-safety-case.html'">
+                  <td class="cell-strong">SAFE-1038</td>
+                  <td><span class="chip warning">High</span></td>
+                  <td>Harassment</td>
+                  <td>14h left</td>
+                  <td>Nisha S.</td>
+                  <td><span class="chip info">Open</span></td>
+                  <td>8 Aug</td>
+                </tr>
+                <tr class="clickable" onclick="location.href='adm-11-safety-case.html'">
+                  <td class="cell-strong">SAFE-1031</td>
+                  <td><span class="chip neutral">Standard</span></td>
+                  <td>Fake profile</td>
+                  <td>1d left</td>
+                  <td>Unassigned</td>
+                  <td><span class="chip info">Open</span></td>
+                  <td>7 Aug</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="admin-nav.js"></script>
+</body>
+</html>

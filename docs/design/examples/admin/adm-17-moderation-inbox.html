@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADM-17 · Moderation inbox — ElAris Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-shared.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" data-active="moderation"></aside>
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb">Trust / <strong>Moderation inbox</strong></div>
+        <div class="topbar-actions">
+          <div class="admin-chip"><span class="admin-avatar">AK</span> Asha K. · Reviewer</div>
+        </div>
+      </header>
+      <div class="content">
+        <div class="page-head">
+          <div>
+            <h1>Moderation inbox</h1>
+            <p>Flagged photos, liveness failures, prompt content, duplicate signals.</p>
+          </div>
+          <div class="page-actions">
+            <span class="chip danger">4 urgent</span>
+            <span class="chip warning">11 open</span>
+          </div>
+        </div>
+
+        <div class="power-bar">
+          <span class="label">Queue actions</span>
+          <button class="btn btn-accent" type="button">Assign to me</button>
+          <button class="btn btn-secondary" type="button">Approve selected media</button>
+          <button class="btn btn-danger" type="button">Remove selected media</button>
+        </div>
+
+        <div class="filters">
+          <div class="field"><label>Type</label><select><option selected>All</option><option>Photo flag</option><option>Liveness</option><option>Prompt</option><option>Duplicate</option></select></div>
+          <div class="field"><label>Priority</label><select><option selected>Any</option><option>Urgent</option><option>Normal</option></select></div>
+          <button class="btn btn-secondary" type="button">Apply</button>
+        </div>
+
+        <section class="panel">
+          <div class="table-wrap">
+            <table class="data">
+              <thead><tr><th></th><th>ID</th><th>Type</th><th>Member</th><th>Signal</th><th>Priority</th><th>Age</th><th></th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" checked /></td>
+                  <td class="cell-strong">MOD-220</td>
+                  <td>Photo flag</td>
+                  <td>Kabir</td>
+                  <td>Possible contact info in image</td>
+                  <td><span class="chip danger">Urgent</span></td>
+                  <td>3h</td>
+                  <td><button class="btn btn-ghost btn-sm" type="button">Review</button></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td class="cell-strong">MOD-218</td>
+                  <td>Liveness</td>
+                  <td>Ananya</td>
+                  <td>Manual review after 2 fails</td>
+                  <td><span class="chip warning">High</span></td>
+                  <td>9h</td>
+                  <td><button class="btn btn-ghost btn-sm" type="button">Review</button></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td class="cell-strong">MOD-215</td>
+                  <td>Prompt</td>
+                  <td>Dev</td>
+                  <td>External handle suspected</td>
+                  <td><span class="chip neutral">Normal</span></td>
+                  <td>1d</td>
+                  <td><button class="btn btn-ghost btn-sm" type="button">Review</button></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td class="cell-strong">MOD-211</td>
+                  <td>Duplicate</td>
+                  <td>—</td>
+                  <td>Phone collision with soft-deleted</td>
+                  <td><span class="chip warning">High</span></td>
+                  <td>2d</td>
+                  <td><button class="btn btn-ghost btn-sm" type="button">Review</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="admin-nav.js"></script>
+</body>
+</html>

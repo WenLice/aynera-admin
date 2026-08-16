@@ -1,12 +1,12 @@
 # elaris-admin
 
-Staff admin panel for ElAris (`admin.elaris.com`) and the **system of record for all documentation**.
+Admin panel for ElAris (`admin.elaris.com`) and the **system of record for all documentation**.
 
 ## Layout
 
 | Path | Purpose |
 |------|---------|
-| `src/` | Admin application code |
+| `src/` | Admin application (Vite + React + TypeScript) |
 | `docs/` | All product, engineering, operations, and sensitive documents |
 
 ## Docs index
@@ -16,7 +16,8 @@ See [docs/README.md](./docs/README.md) and [docs/structure.md](./docs/structure.
 ## Quick start
 
 ```bash
-npm create vite@latest . -- --template react-ts
+npm install
+npm run dev
 ```
 
-Keep UI code under `src/`.
+Open http://localhost:5173. API default is `http://localhost:5057` (`VITE_ELARIS_API_BASE_URL`). See [docs/setup.md](./docs/setup.md) and [docs/engineering/admin-developer-guide.md](./docs/engineering/admin-developer-guide.md).

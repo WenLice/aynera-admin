@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADM-21 · Tools & exports — ElAris Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-shared.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" data-active="tools"></aside>
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb">Ops / <strong>Tools &amp; exports</strong></div>
+        <div class="topbar-actions">
+          <div class="admin-chip"><span class="admin-avatar">AK</span> Asha K.</div>
+        </div>
+      </header>
+      <div class="content">
+        <div class="page-head">
+          <div>
+            <h1>Tools &amp; exports</h1>
+            <p>Support lookup and CSV exports. Masked PII only.</p>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-bottom:16px;">
+          <section class="panel panel-pad">
+            <h3 style="margin:0 0 12px; font-size:14px;">Correlation / support lookup</h3>
+            <div class="field"><label>Correlation ID</label><input placeholder="e.g. 7c2e…" value="a91f-…" /></div>
+            <div class="field" style="margin-top:10px;"><label>Or member ID</label><input placeholder="mem_…" /></div>
+            <button class="btn btn-primary" type="button" style="margin-top:12px;">Lookup</button>
+            <hr class="hr" />
+            <div class="metric-row"><span>Last request</span><strong>PATCH /profiles · 200</strong></div>
+            <div class="metric-row"><span>User</span><strong>mem_8f2a…</strong></div>
+            <div class="metric-row"><span>AuditLog</span><strong><a href="adm-13-audit-log.html">Open</a></strong></div>
+          </section>
+
+          <section class="panel panel-pad">
+            <h3 style="margin:0 0 12px; font-size:14px;">Exports (audited)</h3>
+            <div class="stack-sm">
+              <button class="btn btn-secondary btn-block" type="button">Waitlist CSV · Delhi</button>
+              <button class="btn btn-secondary btn-block" type="button">Waitlist CSV · Bangalore</button>
+              <button class="btn btn-secondary btn-block" type="button">Cohort supply matrix</button>
+              <button class="btn btn-secondary btn-block" type="button">Pilot metrics snapshot</button>
+              <button class="btn btn-secondary btn-block" type="button">Safety case summary (no narratives)</button>
+            </div>
+            <p class="tiny muted" style="margin:12px 0 0;">Exports exclude OTP, tokens, evidence bytes, full phones/emails.</p>
+          </section>
+        </div>
+
+        <section class="panel panel-pad">
+          <h3 style="margin:0 0 10px; font-size:14px;">Support view (masked)</h3>
+          <p class="tiny muted" style="margin:0 0 12px;">Optional “view member journey” without impersonating sessions.</p>
+          <div class="row">
+            <input class="search" style="width:280px;" placeholder="Member ID" />
+            <a class="btn btn-accent" href="adm-07-member-detail.html">Open support view</a>
+            <a class="btn btn-secondary" href="adm-16-member-control.html">Open control panel</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="admin-nav.js"></script>
+</body>
+</html>

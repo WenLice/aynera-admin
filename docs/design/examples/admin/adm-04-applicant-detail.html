@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADM-04 · Applicant detail — ElAris Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-shared.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" data-active="applicants"></aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb"><a href="adm-03-applicant-queue.html">Applicants</a> / <strong>Meera</strong></div>
+        <div class="topbar-actions">
+          <input class="search" type="search" placeholder="Search…" />
+          <div class="admin-chip"><span class="admin-avatar">AK</span> Asha K. · Reviewer</div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="page-head">
+          <div>
+            <h1>Meera <span class="chip core" style="vertical-align:middle; margin-left:6px;">Core</span></h1>
+            <p>Delhi · Age 29 · Relationship ready · Submitted 7 Aug · Queue 41h</p>
+          </div>
+          <div class="page-actions">
+            <span class="chip success">Identity verified</span>
+            <span class="chip warning">Under review</span>
+          </div>
+        </div>
+
+        <div class="split">
+          <div class="stack">
+            <section class="panel panel-pad">
+              <h3 style="margin:0 0 12px; font-size:14px;">Photos</h3>
+              <div class="photo-stack">
+                <div class="photo-main" aria-label="Primary photo placeholder"></div>
+                <div class="photo-side">
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="panel panel-pad stack">
+              <h3 style="margin:0; font-size:14px;">Prompts</h3>
+              <dl class="prompt">
+                <dt>I'm looking for…</dt>
+                <dd>Someone who values calm evenings and clear communication as much as ambition.</dd>
+              </dl>
+              <dl class="prompt">
+                <dt>Weekend rhythm</dt>
+                <dd>Cafe mornings, one social plan, and time to reset before the week.</dd>
+              </dl>
+            </section>
+
+            <section class="panel panel-pad">
+              <h3 style="margin:0 0 12px; font-size:14px;">Preferences summary</h3>
+              <div class="row" style="margin-bottom:10px;">
+                <span class="chip">Age 27–34</span>
+                <span class="chip">Delhi NCR</span>
+                <span class="chip">Open to exclusivity</span>
+              </div>
+              <p class="tiny muted" style="margin:0;">Hard filters reciprocal · dealbreakers: smoking, long-distance only.</p>
+            </section>
+          </div>
+
+          <aside class="stack sticky-rail">
+            <section class="panel panel-pad">
+              <h3 style="margin:0 0 12px; font-size:14px;">Review checklist</h3>
+              <ul class="check-list">
+                <li><input type="checkbox" checked disabled /> Photos meet guidance</li>
+                <li><input type="checkbox" checked disabled /> Prompts show effort</li>
+                <li><input type="checkbox" checked disabled /> Intent compatible</li>
+                <li><input type="checkbox" checked disabled /> Identity / liveness OK</li>
+                <li><input type="checkbox" disabled /> Community standards OK</li>
+                <li><input type="checkbox" disabled /> Cohort capacity OK</li>
+              </ul>
+              <hr class="hr" />
+              <div class="field">
+                <label for="notes">Internal notes (never shown to applicant)</label>
+                <textarea id="notes">Strong profile. Check South Delhi area preference against current supply.</textarea>
+              </div>
+              <div class="field" style="margin-top:10px;">
+                <label for="reason">Decision reason category</label>
+                <select id="reason">
+                  <option>Select…</option>
+                  <option>Profile quality</option>
+                  <option>Intent mismatch</option>
+                  <option>Content standards</option>
+                  <option>Cohort capacity</option>
+                  <option>Verification incomplete</option>
+                </select>
+              </div>
+              <div class="stack-sm" style="margin-top:14px;">
+                <button class="btn btn-accent btn-block" type="button">Approve &amp; activate</button>
+                <button class="btn btn-secondary btn-block" type="button">Approve · waitlist</button>
+                <button class="btn btn-secondary btn-block" type="button">Request more info</button>
+                <button class="btn btn-danger btn-block" type="button">Not currently eligible</button>
+              </div>
+            </section>
+            <a class="btn btn-ghost btn-block" href="adm-05-professionals-review.html">Open Professionals review layout →</a>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="admin-nav.js"></script>
+</body>
+</html>

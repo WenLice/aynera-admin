@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADM-22 · Grievance inbox — ElAris Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-shared.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" data-active="grievances"></aside>
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb">Trust / <strong>Grievances</strong></div>
+        <div class="topbar-actions">
+          <div class="admin-chip"><span class="admin-avatar">AK</span> Asha K.</div>
+        </div>
+      </header>
+      <div class="content">
+        <div class="page-head">
+          <div>
+            <h1>Grievance &amp; public feedback inbox</h1>
+            <p>From website grievance / suggestions forms (today write-only on API).</p>
+          </div>
+          <div class="page-actions"><span class="chip warning">5 open</span></div>
+        </div>
+
+        <div class="power-bar">
+          <span class="label">Actions</span>
+          <button class="btn btn-accent" type="button">Assign</button>
+          <button class="btn btn-secondary" type="button">Mark in progress</button>
+          <button class="btn btn-secondary" type="button">Reply via template</button>
+          <button class="btn btn-secondary" type="button">Escalate to safety</button>
+        </div>
+
+        <section class="panel">
+          <div class="table-wrap">
+            <table class="data">
+              <thead><tr><th>ID</th><th>Type</th><th>Subject</th><th>Contact (masked)</th><th>Status</th><th>Age</th><th></th></tr></thead>
+              <tbody>
+                <tr>
+                  <td class="cell-strong">GRV-118</td>
+                  <td><span class="chip danger">Grievance</span></td>
+                  <td>Account deletion not confirmed</td>
+                  <td>a***@mail.example</td>
+                  <td><span class="chip warning">Open</span></td>
+                  <td>6h</td>
+                  <td><button class="btn btn-ghost btn-sm" type="button">Open</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">FBK-440</td>
+                  <td><span class="chip info">Suggestion</span></td>
+                  <td>Add Pune waitlist clarity</td>
+                  <td>+91******9910</td>
+                  <td><span class="chip neutral">Triaged</span></td>
+                  <td>1d</td>
+                  <td><button class="btn btn-ghost btn-sm" type="button">Open</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">GRV-115</td>
+                  <td><span class="chip danger">Grievance</span></td>
+                  <td>Dispute Professionals decision</td>
+                  <td>r***@corp.example</td>
+                  <td><span class="chip info">In progress</span></td>
+                  <td>2d</td>
+                  <td><button class="btn btn-ghost btn-sm" type="button">Open</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="admin-nav.js"></script>
+</body>
+</html>

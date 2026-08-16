@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADM-19 · Comms templates — ElAris Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-shared.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" data-active="comms"></aside>
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb">Ops / <strong>Comms</strong></div>
+        <div class="topbar-actions">
+          <button class="btn btn-accent btn-sm" type="button">Send test</button>
+          <div class="admin-chip"><span class="admin-avatar">AK</span> Asha K.</div>
+        </div>
+      </header>
+      <div class="content">
+        <div class="page-head">
+          <div>
+            <h1>Communications</h1>
+            <p>Templated, audited messages. Never paste OTP codes or verify URLs into free text.</p>
+          </div>
+        </div>
+
+        <div class="split-wide">
+          <section class="panel">
+            <div class="panel-head"><h2>Templates</h2></div>
+            <div class="table-wrap">
+              <table class="data">
+                <thead><tr><th>Template</th><th>Channel</th><th>Trigger</th></tr></thead>
+                <tbody>
+                  <tr class="clickable"><td class="cell-strong">Approval · active</td><td>Email</td><td>Decision</td></tr>
+                  <tr class="clickable"><td class="cell-strong">Approval · waitlisted</td><td>Email</td><td>Decision</td></tr>
+                  <tr class="clickable"><td class="cell-strong">Additional info request</td><td>Email</td><td>Reviewer</td></tr>
+                  <tr class="clickable"><td class="cell-strong">Safety acknowledgement</td><td>Email</td><td>Case open</td></tr>
+                  <tr class="clickable"><td class="cell-strong">Cohort invite wave</td><td>Email/SMS</td><td>Operator</td></tr>
+                  <tr class="clickable"><td class="cell-strong">Not currently eligible</td><td>Email</td><td>Decision</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="panel panel-pad">
+            <h3 style="margin:0 0 12px; font-size:14px;">Compose · Additional info request</h3>
+            <div class="field"><label>To</label><input value="Selected: Ananya (masked)" /></div>
+            <div class="field" style="margin-top:10px;"><label>Subject</label><input value="ElAris — we need one more detail" /></div>
+            <div class="field" style="margin-top:10px;"><label>Body</label>
+              <textarea rows="8">Hi {{first_name}},
+
+Thanks for applying. To finish review we need: {{request_items}}.
+
+This is not a rejection. Reply in the app when ready.
+
+— ElAris review team</textarea>
+            </div>
+            <div class="banner warn" style="margin:12px 0;">Variables only — no raw emails/phones in body. Send is audited.</div>
+            <div class="row">
+              <button class="btn btn-accent" type="button">Send to selection</button>
+              <button class="btn btn-secondary" type="button">Save template</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="admin-nav.js"></script>
+</body>
+</html>

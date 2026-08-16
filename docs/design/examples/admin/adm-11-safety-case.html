@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADM-11 · Safety case — ElAris Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-shared.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" data-active="safety"></aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb"><a href="adm-10-safety-queue.html">Safety</a> / <strong>SAFE-1042</strong></div>
+        <div class="topbar-actions">
+          <input class="search" type="search" placeholder="Search…" />
+          <div class="admin-chip"><span class="admin-avatar">NS</span> Nisha S. · Safety</div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="banner danger" style="margin-bottom:16px;">
+          If someone is in immediate danger, they should contact local emergency services. ElAris cannot provide emergency response.
+        </div>
+
+        <div class="page-head">
+          <div>
+            <h1>SAFE-1042</h1>
+            <p>Felt unsafe on a date · Reporter: Priya · Reported: Vikram · Delhi</p>
+          </div>
+          <div class="page-actions">
+            <span class="chip danger">Urgent</span>
+            <span class="chip warning">In progress</span>
+          </div>
+        </div>
+
+        <div class="split">
+          <div class="stack">
+            <section class="panel panel-pad">
+              <h3 style="margin:0 0 10px; font-size:14px;">Reporter narrative</h3>
+              <p style="margin:0; font-size:13.5px; line-height:1.55;">
+                Met at a public cafe as planned. Conversation was fine at first; later he insisted on changing venue and pressed for personal contact details after I said no. I left. I do not feel safe continuing the match.
+              </p>
+            </section>
+
+            <section class="panel panel-pad">
+              <h3 style="margin:0 0 10px; font-size:14px;">Relevant content</h3>
+              <div class="prompt" style="margin-bottom:8px;">
+                <dt class="tiny muted" style="font-weight:600;">Chat excerpt · 8 Aug</dt>
+                <dd>“Let’s go somewhere quieter — share your number so I can send the pin.”</dd>
+              </div>
+              <div class="prompt">
+                <dt class="tiny muted" style="font-weight:600;">Date plan</dt>
+                <dd>Partner cafe · Hauz Khas · 7:30pm · Share Date sent to trusted contact</dd>
+              </div>
+            </section>
+
+            <section class="panel panel-pad">
+              <h3 style="margin:0 0 10px; font-size:14px;">Prior cases</h3>
+              <p class="tiny muted" style="margin:0 0 8px;">Reported member Vikram</p>
+              <div class="row">
+                <span class="chip neutral">SAFE-0988 · Closed · Warning</span>
+                <span class="chip">No prior urgent</span>
+              </div>
+            </section>
+
+            <section class="panel panel-pad">
+              <h3 style="margin:0 0 12px; font-size:14px;">Audit timeline</h3>
+              <ul class="timeline">
+                <li><div class="t-title">Case opened</div><div class="t-meta">9 Aug · 09:12 · System</div></li>
+                <li><div class="t-title">Assigned to Nisha S.</div><div class="t-meta">9 Aug · 09:18</div></li>
+                <li><div class="t-title">Reporter acknowledgement sent</div><div class="t-meta">9 Aug · 09:20</div></li>
+              </ul>
+            </section>
+          </div>
+
+          <aside class="stack sticky-rail">
+            <section class="panel panel-pad">
+              <h3 style="margin:0 0 12px; font-size:14px;">Actions</h3>
+              <div class="field">
+                <label>Action</label>
+                <select>
+                  <option>Warn member</option>
+                  <option selected>Restrict messaging</option>
+                  <option>Suspend account</option>
+                  <option>Escalate</option>
+                  <option>Close — no action</option>
+                </select>
+              </div>
+              <div class="field" style="margin-top:10px;">
+                <label>Escalation / internal notes</label>
+                <textarea>Immediate messaging restrict. Review prior warning. Follow up with reporter within SLA.</textarea>
+              </div>
+              <div class="stack-sm" style="margin-top:14px;">
+                <button class="btn btn-accent btn-block" type="button">Apply action</button>
+                <button class="btn btn-danger btn-block" type="button">Suspend reported member</button>
+                <a class="btn btn-secondary btn-block" href="adm-07-member-detail.html">Open member detail</a>
+                <a class="btn btn-ghost btn-block" href="adm-10-safety-queue.html">← Back to queue</a>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="admin-nav.js"></script>
+</body>
+</html>

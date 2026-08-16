@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADM-07 · Member detail — ElAris Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-shared.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" data-active="members"></aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb">Members / <strong>Priya</strong></div>
+        <div class="topbar-actions">
+          <input class="search" type="search" placeholder="Search members…" />
+          <div class="admin-chip"><span class="admin-avatar">AK</span> Asha K. · Reviewer</div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="page-head">
+          <div>
+            <h1>Priya <span class="chip core" style="vertical-align:middle; margin-left:6px;">Core</span></h1>
+            <p>Delhi · 28 · Approved active · Phone +91******3210</p>
+          </div>
+          <div class="page-actions">
+            <span class="chip success">Active</span>
+            <a class="btn btn-secondary btn-sm" href="adm-08-curator-workspace.html">Curate intro</a>
+          </div>
+        </div>
+
+        <div class="tabs">
+          <a class="active" href="#profile">Profile</a>
+          <a href="#verification">Verification</a>
+          <a href="#state">State</a>
+          <a href="#intros">Introductions</a>
+          <a href="#restrictions">Restrictions</a>
+          <a href="#reports">Reports</a>
+          <a href="#audit">Audit</a>
+        </div>
+
+        <div class="grid-2">
+          <section class="panel panel-pad" id="profile">
+            <h3 style="margin:0 0 12px; font-size:14px;">Profile</h3>
+            <div class="photo-stack" style="margin-bottom:14px;">
+              <div class="photo-main"></div>
+              <div class="photo-side"><div></div><div></div></div>
+            </div>
+            <div class="row" style="margin-bottom:10px;">
+              <span class="chip">Relationship ready</span>
+              <span class="chip">South Delhi</span>
+            </div>
+            <p class="tiny muted" style="margin:0;">Surname hidden from members · approximate location only.</p>
+          </section>
+
+          <div class="stack">
+            <section class="panel panel-pad" id="verification">
+              <h3 style="margin:0 0 10px; font-size:14px;">Verification</h3>
+              <div class="stack-sm">
+                <div class="row"><span class="chip success">Phone</span><span class="chip success">Email</span><span class="chip success">Liveness</span></div>
+                <p class="tiny muted" style="margin:0;">Approved by Asha K. · 2 Aug 2026</p>
+              </div>
+            </section>
+
+            <section class="panel panel-pad" id="state">
+              <h3 style="margin:0 0 10px; font-size:14px;">Relationship state</h3>
+              <div class="row">
+                <span class="chip info">In Meet</span>
+                <span class="chip neutral">1 active match</span>
+                <span class="chip">Focus eligible</span>
+              </div>
+            </section>
+
+            <section class="panel panel-pad" id="intros">
+              <h3 style="margin:0 0 10px; font-size:14px;">Introduction history</h3>
+              <table class="data">
+                <thead><tr><th>Pair</th><th>Outcome</th><th>Date</th></tr></thead>
+                <tbody>
+                  <tr class="clickable" onclick="location.href='adm-09-introduction-detail.html'">
+                    <td>Priya ↔ Arjun</td><td><span class="chip success">Matched</span></td><td>4 Aug</td>
+                  </tr>
+                  <tr>
+                    <td>Priya ↔ Kabir</td><td><span class="chip neutral">Passed</span></td><td>1 Aug</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+            <section class="panel panel-pad" id="restrictions">
+              <h3 style="margin:0 0 8px; font-size:14px;">Restrictions</h3>
+              <p class="tiny muted" style="margin:0;">None active.</p>
+            </section>
+
+            <section class="panel panel-pad" id="reports">
+              <h3 style="margin:0 0 8px; font-size:14px;">Reports</h3>
+              <a class="chip danger" href="adm-11-safety-case.html">Reporter on SAFE-1042</a>
+            </section>
+
+            <section class="panel panel-pad" id="audit">
+              <h3 style="margin:0 0 10px; font-size:14px;">Recent audit</h3>
+              <ul class="timeline">
+                <li><div class="t-title">Profile approved</div><div class="t-meta">2 Aug · Asha K.</div></li>
+                <li><div class="t-title">Introduction delivered</div><div class="t-meta">4 Aug · Curator</div></li>
+              </ul>
+              <a class="btn btn-ghost btn-sm" href="adm-13-audit-log.html" style="margin-top:8px;">Full audit log</a>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="admin-nav.js"></script>
+</body>
+</html>

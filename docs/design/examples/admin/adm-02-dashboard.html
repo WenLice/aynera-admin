@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADM-02 · Dashboard — ElAris Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-shared.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" data-active="dashboard"></aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb">Operations / <strong>Dashboard</strong></div>
+        <div class="topbar-actions">
+          <input class="search" type="search" placeholder="Search members or cases…" />
+          <div class="admin-chip"><span class="admin-avatar">AK</span> Asha K. · Reviewer</div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="page-head">
+          <div>
+            <h1>Command dashboard</h1>
+            <p>Delhi &amp; Bangalore pilot — Sunday 9 Aug 2026</p>
+          </div>
+          <div class="page-actions">
+            <div class="seg">
+              <button type="button" class="active">All</button>
+              <button type="button">Delhi</button>
+              <button type="button">Bangalore</button>
+            </div>
+            <a class="btn btn-secondary" href="adm-14-pilot-metrics.html">Full metrics</a>
+            <a class="btn btn-accent" href="adm-03-applicant-queue.html">Next review</a>
+          </div>
+        </div>
+
+        <div class="power-bar">
+          <span class="label">Quick power</span>
+          <a class="btn btn-accent" href="adm-03-applicant-queue.html">Claim next applicant</a>
+          <a class="btn btn-secondary" href="adm-15-waitlist-cities.html">Waitlist</a>
+          <a class="btn btn-secondary" href="adm-17-moderation-inbox.html">Moderation</a>
+          <a class="btn btn-secondary" href="adm-16-member-control.html">Member control</a>
+          <a class="btn btn-secondary" href="adm-23-system-controls.html">Kill-switches</a>
+          <a class="btn btn-danger" href="adm-11-safety-case.html">Urgent safety</a>
+        </div>
+
+        <div class="grid-6" style="margin-bottom:16px;">
+          <a class="kpi" href="adm-03-applicant-queue.html">
+            <span class="kpi-label">New applicants</span>
+            <span class="kpi-value">38</span>
+            <span class="kpi-meta">+12 since yesterday</span>
+          </a>
+          <a class="kpi warn" href="adm-03-applicant-queue.html">
+            <span class="kpi-label">Reviews due</span>
+            <span class="kpi-value">14</span>
+            <span class="kpi-meta">SLA within 48h</span>
+          </a>
+          <a class="kpi" href="adm-07-member-detail.html">
+            <span class="kpi-label">Active members</span>
+            <span class="kpi-value">216</span>
+            <span class="kpi-meta">142 Delhi · 74 BLR</span>
+          </a>
+          <a class="kpi warn" href="adm-06-cohort-dashboard.html">
+            <span class="kpi-label">Cohort balance</span>
+            <span class="kpi-value">2</span>
+            <span class="kpi-meta">Segments imbalanced</span>
+          </a>
+          <a class="kpi" href="adm-08-curator-workspace.html">
+            <span class="kpi-label">Intros awaiting</span>
+            <span class="kpi-value">9</span>
+            <span class="kpi-meta">Curator action needed</span>
+          </a>
+          <a class="kpi danger" href="adm-10-safety-queue.html">
+            <span class="kpi-label">Open safety cases</span>
+            <span class="kpi-value">3</span>
+            <span class="kpi-meta">1 urgent today</span>
+          </a>
+        </div>
+
+        <div class="grid-2">
+          <section class="panel">
+            <div class="panel-head">
+              <h2>Reviews due soon</h2>
+              <a class="btn btn-ghost btn-sm" href="adm-03-applicant-queue.html">View all</a>
+            </div>
+            <div class="table-wrap">
+              <table class="data">
+                <thead>
+                  <tr><th>Name</th><th>City</th><th>Path</th><th>Waiting</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="clickable" onclick="location.href='adm-04-applicant-detail.html'">
+                    <td class="cell-strong">Meera</td><td>Delhi</td><td><span class="chip core">Core</span></td><td>41h</td>
+                  </tr>
+                  <tr class="clickable" onclick="location.href='adm-05-professionals-review.html'">
+                    <td class="cell-strong">Rohan</td><td>Bangalore</td><td><span class="chip pro">Professionals</span></td><td>36h</td>
+                  </tr>
+                  <tr class="clickable" onclick="location.href='adm-04-applicant-detail.html'">
+                    <td class="cell-strong">Ananya</td><td>Delhi</td><td><span class="chip core">Core</span></td><td>29h</td>
+                  </tr>
+                  <tr class="clickable" onclick="location.href='adm-04-applicant-detail.html'">
+                    <td class="cell-strong">Kabir</td><td>Bangalore</td><td><span class="chip core">Core</span></td><td>22h</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <h2>Alerts</h2>
+              <span class="chip warning">3 open</span>
+            </div>
+            <div class="panel-pad stack">
+              <div class="banner danger">Urgent safety case SAFE-1042 — felt unsafe on a date. <a href="adm-11-safety-case.html" style="font-weight:600; color:inherit; text-decoration:underline;">Open case</a></div>
+              <div class="banner warn">Bangalore · women 28–32 segment over-supplied — pause admissions recommended. <a href="adm-06-cohort-dashboard.html" style="font-weight:600; color:inherit; text-decoration:underline;">Cohorts</a></div>
+              <div class="banner info">9 curated introductions waiting for curator reasons. <a href="adm-08-curator-workspace.html" style="font-weight:600; color:inherit; text-decoration:underline;">Curator</a></div>
+              <div class="banner warn">486 on waitlist — invite only when capacity exists. <a href="adm-15-waitlist-cities.html" style="font-weight:600; color:inherit; text-decoration:underline;">Waitlist</a></div>
+              <div class="banner info">4 moderation items urgent. <a href="adm-17-moderation-inbox.html" style="font-weight:600; color:inherit; text-decoration:underline;">Moderation</a></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="admin-nav.js"></script>
+</body>
+</html>

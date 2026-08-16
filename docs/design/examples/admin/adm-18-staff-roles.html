@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADM-18 · Staff & roles — ElAris Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-shared.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" data-active="staff"></aside>
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb">Ops / <strong>Staff &amp; roles</strong></div>
+        <div class="topbar-actions">
+          <button class="btn btn-accent btn-sm" type="button">Invite staff</button>
+          <div class="admin-chip"><span class="admin-avatar">AK</span> Founder admin</div>
+        </div>
+      </header>
+      <div class="content">
+        <div class="page-head">
+          <div>
+            <h1>Staff &amp; roles</h1>
+            <p>Email + password + MFA. Roles: staff, reviewer, curator, safety, cohort.</p>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-bottom:16px;">
+          <section class="panel panel-pad">
+            <h3 style="margin:0 0 12px; font-size:14px;">Invite</h3>
+            <div class="field"><label>Work email</label><input type="email" placeholder="name@elaris.example" /></div>
+            <div class="field" style="margin-top:10px;"><label>Roles</label>
+              <div class="row" style="margin-top:6px;">
+                <label class="chip"><input type="checkbox" checked /> reviewer</label>
+                <label class="chip"><input type="checkbox" /> curator</label>
+                <label class="chip"><input type="checkbox" /> safety</label>
+                <label class="chip"><input type="checkbox" /> cohort</label>
+              </div>
+            </div>
+            <button class="btn btn-primary" type="button" style="margin-top:14px;">Send invite</button>
+          </section>
+          <section class="panel panel-pad">
+            <h3 style="margin:0 0 10px; font-size:14px;">Role matrix</h3>
+            <div class="metric-row"><span>staff.reviewer</span><strong>Applicants, moderation</strong></div>
+            <div class="metric-row"><span>staff.curator</span><strong>Intros, match workspace</strong></div>
+            <div class="metric-row"><span>staff.safety</span><strong>Cases, member control</strong></div>
+            <div class="metric-row"><span>staff.cohort</span><strong>Cohorts, waitlist, cities</strong></div>
+            <div class="metric-row"><span>staff (admin)</span><strong>Staff, system, policy</strong></div>
+          </section>
+        </div>
+
+        <section class="panel">
+          <div class="panel-head"><h2>Active staff</h2></div>
+          <div class="table-wrap">
+            <table class="data">
+              <thead><tr><th>Name</th><th>Email</th><th>Roles</th><th>MFA</th><th>Last login</th><th></th></tr></thead>
+              <tbody>
+                <tr>
+                  <td class="cell-strong">Asha K.</td>
+                  <td>asha@elaris.example</td>
+                  <td><span class="chip">reviewer</span> <span class="chip">staff</span></td>
+                  <td><span class="chip success">On</span></td>
+                  <td>Today</td>
+                  <td><button class="btn btn-ghost btn-sm" type="button">Edit</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">Rhea L.</td>
+                  <td>rhea@elaris.example</td>
+                  <td><span class="chip">curator</span></td>
+                  <td><span class="chip success">On</span></td>
+                  <td>Yesterday</td>
+                  <td><button class="btn btn-ghost btn-sm" type="button">Edit</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">Nisha S.</td>
+                  <td>nisha@elaris.example</td>
+                  <td><span class="chip">safety</span></td>
+                  <td><span class="chip success">On</span></td>
+                  <td>Today</td>
+                  <td><button class="btn btn-ghost btn-sm" type="button">Edit</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">Dev M.</td>
+                  <td>dev@elaris.example</td>
+                  <td><span class="chip">cohort</span></td>
+                  <td><span class="chip warning">Setup</span></td>
+                  <td>Never</td>
+                  <td><button class="btn btn-danger btn-sm" type="button">Deactivate</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="admin-nav.js"></script>
+</body>
+</html>

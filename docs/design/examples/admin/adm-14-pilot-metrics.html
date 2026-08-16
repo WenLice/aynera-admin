@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADM-14 · Pilot metrics — ElAris Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-shared.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" data-active="metrics"></aside>
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb">Command / <strong>Pilot metrics</strong></div>
+        <div class="topbar-actions">
+          <div class="seg"><button type="button">7d</button><button type="button" class="active">30d</button><button type="button">All</button></div>
+          <a class="btn btn-secondary btn-sm" href="adm-21-tools-exports.html">Export CSV</a>
+          <div class="admin-chip"><span class="admin-avatar">AK</span> Asha K.</div>
+        </div>
+      </header>
+      <div class="content">
+        <div class="page-head">
+          <div>
+            <h1>Pilot metrics</h1>
+            <p>Outcome-oriented — not engagement addiction. Delhi &amp; Bangalore.</p>
+          </div>
+          <div class="page-actions">
+            <div class="seg"><button type="button" class="active">All</button><button type="button">Delhi</button><button type="button">Bangalore</button></div>
+          </div>
+        </div>
+
+        <div class="grid-3" style="margin-bottom:16px;">
+          <section class="panel panel-pad metric-card">
+            <h4>11.1 Acquisition &amp; supply</h4>
+            <div class="metric-row"><span>Applications</span><strong>1,284</strong></div>
+            <div class="metric-row"><span>Eligibility completion</span><strong>62%</strong></div>
+            <div class="stat-bar" style="margin:8px 0;"><span style="width:62%"></span></div>
+            <div class="metric-row"><span>Approval rate</span><strong>41%</strong></div>
+            <div class="metric-row"><span>Waitlist size</span><strong>486</strong></div>
+            <div class="metric-row"><span>Professionals evidence done</span><strong>58%</strong></div>
+          </section>
+          <section class="panel panel-pad metric-card">
+            <h4>11.2 Activation</h4>
+            <div class="metric-row"><span>Approved → profile complete</span><strong>89%</strong></div>
+            <div class="metric-row"><span>App → approval (median)</span><strong>36h</strong></div>
+            <div class="metric-row"><span>Approval → first intro</span><strong>4.2d</strong></div>
+            <div class="metric-row"><span>Intro viewed rate</span><strong>93%</strong></div>
+          </section>
+          <section class="panel panel-pad metric-card">
+            <h4>11.3 Connection quality</h4>
+            <div class="metric-row"><span>Interest / intro</span><strong>38%</strong></div>
+            <div class="metric-row"><span>Reciprocal match</span><strong>21%</strong></div>
+            <div class="metric-row"><span>Two-way conversation</span><strong>74%</strong></div>
+            <div class="metric-row"><span>Planned meeting</span><strong>29%</strong></div>
+            <div class="metric-row"><span>Post-date feedback</span><strong>61%</strong></div>
+          </section>
+          <section class="panel panel-pad metric-card">
+            <h4>11.4 Relationship progression</h4>
+            <div class="metric-row"><span>Focus request rate</span><strong>12%</strong></div>
+            <div class="metric-row"><span>Focus accept</span><strong>68%</strong></div>
+            <div class="metric-row"><span>Together confirm</span><strong>4%</strong></div>
+            <div class="metric-row"><span>Together exit</span><strong>1.2%</strong></div>
+          </section>
+          <section class="panel panel-pad metric-card">
+            <h4>11.5 Trust &amp; safety</h4>
+            <div class="metric-row"><span>Reports / active member</span><strong>0.04</strong></div>
+            <div class="metric-row"><span>Blocks / active member</span><strong>0.11</strong></div>
+            <div class="metric-row"><span>Case response (median)</span><strong>5.4h</strong></div>
+            <div class="metric-row"><span>Repeat offenders</span><strong>2</strong></div>
+            <div class="metric-row"><span>Verify resubmit</span><strong>7%</strong></div>
+          </section>
+          <section class="panel panel-pad metric-card">
+            <h4>11.6 Professionals commercial</h4>
+            <div class="metric-row"><span>Eligible waitlist demand</span><strong>142</strong></div>
+            <div class="metric-row"><span>Approval → paid (test)</span><strong>—</strong></div>
+            <div class="metric-row"><span>Review cost / approve</span><strong>₹420 est.</strong></div>
+            <div class="metric-row"><span>Referral intent</span><strong>n/a</strong></div>
+          </section>
+        </div>
+
+        <section class="panel panel-pad">
+          <h3 style="margin:0 0 10px; font-size:14px;">Exit-gate checklist (pilot → mobile)</h3>
+          <ul class="check-list">
+            <li><input type="checkbox" checked disabled /> Usable cohort in ≥1 city</li>
+            <li><input type="checkbox" checked disabled /> Review under 2 minutes median</li>
+            <li><input type="checkbox" disabled /> Regular two-way conversations from curated intros</li>
+            <li><input type="checkbox" disabled /> Planned meetings happening</li>
+            <li><input type="checkbox" disabled /> Safety SLA met</li>
+            <li><input type="checkbox" disabled /> 200+ qualified waitlist (signal only)</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="admin-nav.js"></script>
+</body>
+</html>

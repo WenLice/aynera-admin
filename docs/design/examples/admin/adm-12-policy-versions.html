@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADM-12 · Policy versions — ElAris Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-shared.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" data-active="policy"></aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb">Policy / <strong>Versions</strong></div>
+        <div class="topbar-actions">
+          <input class="search" type="search" placeholder="Search versions…" />
+          <div class="admin-chip"><span class="admin-avatar">AK</span> Asha K. · Staff</div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="page-head">
+          <div>
+            <h1>Policy and rule versions</h1>
+            <p>Track what applicants and members consented to, and which matching rules applied.</p>
+          </div>
+          <div class="page-actions">
+            <button class="btn btn-secondary" type="button" disabled>Publish new version</button>
+          </div>
+        </div>
+
+        <div class="grid-3" style="margin-bottom:16px;">
+          <section class="panel panel-pad">
+            <div class="tiny muted">Consent pack</div>
+            <div class="cell-strong" style="font-size:18px; margin:6px 0;">v1.2</div>
+            <div class="tiny muted">Effective 1 Jul 2026</div>
+          </section>
+          <section class="panel panel-pad">
+            <div class="tiny muted">Community rules</div>
+            <div class="cell-strong" style="font-size:18px; margin:6px 0;">v1.1</div>
+            <div class="tiny muted">Effective 15 Jun 2026</div>
+          </section>
+          <section class="panel panel-pad">
+            <div class="tiny muted">Matching rules</div>
+            <div class="cell-strong" style="font-size:18px; margin:6px 0;">v0.3</div>
+            <div class="tiny muted">Effective 20 Jul 2026</div>
+          </section>
+        </div>
+
+        <section class="panel">
+          <div class="panel-head"><h2>Version history</h2></div>
+          <div class="table-wrap">
+            <table class="data">
+              <thead>
+                <tr><th>Type</th><th>Version</th><th>Effective</th><th>Status</th><th>Notes</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Consent</td><td class="cell-strong">v1.2</td><td>1 Jul 2026</td>
+                  <td><span class="chip success">Current</span></td>
+                  <td class="cell-muted">Professionals evidence notice added</td>
+                </tr>
+                <tr>
+                  <td>Consent</td><td>v1.1</td><td>1 May 2026</td>
+                  <td><span class="chip neutral">Superseded</span></td>
+                  <td class="cell-muted">Initial pilot pack</td>
+                </tr>
+                <tr>
+                  <td>Community rules</td><td class="cell-strong">v1.1</td><td>15 Jun 2026</td>
+                  <td><span class="chip success">Current</span></td>
+                  <td class="cell-muted">Report categories clarified</td>
+                </tr>
+                <tr>
+                  <td>Matching rules</td><td class="cell-strong">v0.3</td><td>20 Jul 2026</td>
+                  <td><span class="chip success">Current</span></td>
+                  <td class="cell-muted">Reciprocal hard filters documented</td>
+                </tr>
+                <tr>
+                  <td>Matching rules</td><td>v0.2</td><td>1 Jun 2026</td>
+                  <td><span class="chip neutral">Superseded</span></td>
+                  <td class="cell-muted">Early curator rubric</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="admin-nav.js"></script>
+</body>
+</html>

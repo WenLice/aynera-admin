@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADM-06 · Cohort dashboard — ElAris Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-shared.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" data-active="cohorts"></aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb">Cohorts / <strong>Supply &amp; controls</strong></div>
+        <div class="topbar-actions">
+          <input class="search" type="search" placeholder="Search segments…" />
+          <div class="admin-chip"><span class="admin-avatar">DM</span> Dev M. · Cohort</div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="page-head">
+          <div>
+            <h1>Cohort dashboard</h1>
+            <p>Honest capacity by city and reciprocal preference segment.</p>
+          </div>
+          <div class="page-actions">
+            <div class="seg">
+              <button type="button">All</button>
+              <button type="button" class="active">Delhi</button>
+              <button type="button">Bangalore</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="power-bar">
+          <span class="label">Cohort power</span>
+          <button class="btn btn-accent" type="button">Set default intro cap = 2/week</button>
+          <button class="btn btn-secondary" type="button">Pause imbalanced segments</button>
+          <a class="btn btn-secondary" href="adm-15-waitlist-cities.html">Invite from waitlist</a>
+          <a class="btn btn-secondary" href="adm-21-tools-exports.html">Export matrix</a>
+        </div>
+
+        <div class="grid-3" style="margin-bottom:16px;">
+          <div class="kpi"><span class="kpi-label">Approved</span><span class="kpi-value">142</span><span class="kpi-meta">Delhi active cohorts</span></div>
+          <div class="kpi warn"><span class="kpi-label">Imbalanced</span><span class="kpi-value">2</span><span class="kpi-meta">Segments need control</span></div>
+          <div class="kpi"><span class="kpi-label">Intro capacity</span><span class="kpi-value">64</span><span class="kpi-meta">Members ready this week</span></div>
+        </div>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Delhi · reciprocal segments</h2>
+            <span class="tiny muted">Approved / Active / Waitlisted · Age overlap · Control</span>
+          </div>
+          <div class="table-wrap" style="padding:12px;">
+            <table class="matrix">
+              <thead>
+                <tr>
+                  <th>Segment</th>
+                  <th>Approved</th>
+                  <th>Active</th>
+                  <th>Waitlisted</th>
+                  <th>Age overlap</th>
+                  <th>Intro cap</th>
+                  <th>Control</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="seg-label">Women 27–32 ↔ Men 28–34</td>
+                  <td>48</td><td>41</td><td>12</td><td>High</td><td>18</td>
+                  <td><span class="chip success">Open</span></td>
+                </tr>
+                <tr class="imbalance">
+                  <td class="seg-label">Women 28–32 ↔ Men 30–36</td>
+                  <td>62</td><td>55</td><td>4</td><td>Medium</td><td>6</td>
+                  <td>
+                    <select style="height:30px; border:1px solid var(--border); border-radius:8px; padding:0 8px;">
+                      <option>Open</option>
+                      <option selected>Controlled</option>
+                      <option>Waitlisted</option>
+                      <option>Paused</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="seg-label">Professionals · Delhi</td>
+                  <td>28</td><td>22</td><td>19</td><td>High</td><td>10</td>
+                  <td><span class="chip warning">Waitlisted</span></td>
+                </tr>
+                <tr class="imbalance">
+                  <td class="seg-label">Men 25–29 ↔ Women 24–28</td>
+                  <td>19</td><td>14</td><td>31</td><td>Low</td><td>4</td>
+                  <td><span class="chip danger">Paused</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel" style="margin-top:16px;">
+          <div class="panel-head">
+            <h2>Bangalore snapshot</h2>
+            <a class="btn btn-ghost btn-sm" href="#">Switch city</a>
+          </div>
+          <div class="panel-pad">
+            <div class="banner warn" style="margin:0;">Women 28–32 over-supplied relative to reciprocal men — pause new women admissions in this band; keep recruiting under-supported side.</div>
+          </div>
+        </section>
+
+        <section class="panel" style="margin-top:16px;">
+          <div class="panel-head">
+            <h2>Inactive / low-response members</h2>
+            <a class="btn btn-ghost btn-sm" href="adm-16-member-control.html">Open controls</a>
+          </div>
+          <div class="table-wrap">
+            <table class="data">
+              <thead><tr><th>Member</th><th>Last active</th><th>Intros unused</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td class="cell-strong">Neha</td><td>18d</td><td>3</td>
+                  <td><button class="btn btn-sm btn-secondary" type="button">Pause discovery</button></td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">Omar</td><td>12d</td><td>2</td>
+                  <td><button class="btn btn-sm btn-secondary" type="button">Cap intros → 0</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="admin-nav.js"></script>
+</body>
+</html>
