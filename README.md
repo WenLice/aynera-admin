@@ -1,6 +1,6 @@
-# elaris-admin
+# aynera-admin
 
-Admin panel for ElAris (`admin.elaris.com`) and the **system of record for all documentation**.
+Admin panel for Aynera (`admin.aynera.com`) and the **system of record for all documentation**.
 
 ## Layout
 
@@ -20,4 +20,4 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:5173. API default is `http://localhost:5057` (`VITE_ELARIS_API_BASE_URL`). See [docs/setup.md](./docs/setup.md) and [docs/engineering/admin-developer-guide.md](./docs/engineering/admin-developer-guide.md).
+Open http://localhost:5173. API default is `http://localhost:5057` (`VITE_AYNERA_API_BASE_URL`). See [docs/setup.md](./docs/setup.md) and [docs/engineering/admin-developer-guide.md](./docs/engineering/admin-developer-guide.md).

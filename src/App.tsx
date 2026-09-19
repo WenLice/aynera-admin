@@ -11,6 +11,7 @@ import { MemberDetailPage } from "./pages/MemberDetailPage";
 import { MembersPage } from "./pages/MembersPage";
 import { RestrictedPage } from "./pages/RestrictedPage";
 import { SuggestionsPage } from "./pages/SuggestionsPage";
+import { VenuesPage } from "./pages/VenuesPage";
 import { WaitlistPage } from "./pages/WaitlistPage";
 
 function RedirectLegacyMemberPath() {
@@ -35,6 +36,7 @@ export function App() {
               <Route path="/applicants" element={<Navigate to="/members" replace />} />
               <Route path="/applicants/:id" element={<RedirectLegacyMemberPath />} />
               <Route path="/cities" element={<CitiesPage />} />
+              <Route path="/venues" element={<VenuesPage />} />
               <Route path="/suggestions" element={<SuggestionsPage />} />
               <Route path="/feedback" element={<FeedbackPage />} />
               <Route path="/admins" element={<AdminsPage />} />

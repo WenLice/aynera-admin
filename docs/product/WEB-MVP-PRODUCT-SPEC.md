@@ -1,20 +1,20 @@
-# ElAris Web MVP Product Specification
+# Aynera Web MVP Product Specification
 
 **Version:** 0.1  
 **Status:** Working specification for founder review  
 **Launch markets:** Delhi and Bangalore  
 **Delivery approach:** Responsive web product first, native mobile after pilot validation  
-**Products:** ElAris Core and ElAris Professionals inside one account and platform
+**Products:** Aynera Core and Aynera Professionals inside one account and platform
 
 ---
 
 ## 1. Purpose
 
-This document defines the first functional ElAris product to be tested with real users.
+This document defines the first functional Aynera product to be tested with real users.
 
 The current public website remains the marketing, trust, application, safety, and legal layer. The Web MVP adds an authenticated, mobile-first product where approved members can create profiles, receive curated introductions, communicate safely, and move through mutual relationship states.
 
-The Web MVP exists to validate the difficult parts of ElAris before building a native mobile app:
+The Web MVP exists to validate the difficult parts of Aynera before building a native mobile app:
 
 - Can balanced local cohorts be formed?
 - Can curated introductions create better conversations than an open feed?
@@ -28,9 +28,9 @@ The Web MVP exists to validate the difficult parts of ElAris before building a n
 
 ## 2. Product promise
 
-> When you choose each other, ElAris stops the search.
+> When you choose each other, Aynera stops the search.
 
-ElAris is optimized for relationship outcomes rather than time spent browsing.
+Aynera is optimized for relationship outcomes rather than time spent browsing.
 
 The platform has five product modules:
 
@@ -46,17 +46,17 @@ The Web MVP will test Meet first and introduce thin versions of Focus, Together,
 
 ## 3. Product structure
 
-ElAris will have one identity system, one account, and one relationship journey.
+Aynera will have one identity system, one account, and one relationship journey.
 
 ### 3.1 Public website
 
-**Suggested URL:** `elaris.com`
+**Suggested URL:** `aynera.com`
 
 Responsibilities:
 
 - Explain the brand and product
 - Present the five modules
-- Explain how ElAris works
+- Explain how Aynera works
 - Describe Core and Professionals
 - Collect applications and waitlist demand
 - Publish safety, privacy, terms, grievance, and account-deletion information
@@ -64,7 +64,7 @@ Responsibilities:
 
 ### 3.2 Authenticated web product
 
-**Suggested URL:** `app.elaris.com` or `elaris.com/app`
+**Suggested URL:** `app.aynera.com` or `aynera.com/app`
 
 Responsibilities:
 
@@ -81,7 +81,7 @@ The product must be responsive and comfortable at 360–390px mobile widths. A P
 
 ### 3.3 Admin and operations portal
 
-**Suggested URL:** `admin.elaris.com`
+**Suggested URL:** `admin.aynera.com`
 
 Responsibilities:
 
@@ -98,7 +98,7 @@ Responsibilities:
 
 ## 4. Launch propositions
 
-### 4.1 ElAris Core
+### 4.1 Aynera Core
 
 **Audience:** Adults seeking an intentional relationship.
 
@@ -115,7 +115,7 @@ Core positioning:
 
 > Verified introductions for people who want something real.
 
-### 4.2 ElAris Professionals
+### 4.2 Aynera Professionals
 
 **Audience:** Established professionals who want a smaller, manually admitted cohort with career-stage and lifestyle context.
 
@@ -561,7 +561,7 @@ Safety cases require:
 - Action taken
 - Escalation notes
 
-Emergency language must clearly state that ElAris is not an emergency-response service.
+Emergency language must clearly state that Aynera is not an emergency-response service.
 
 ---
 

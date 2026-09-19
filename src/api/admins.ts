@@ -6,7 +6,7 @@ export function listAdmins(page: number, pageSize = 15): Promise<PagedResult<Aut
     page: String(page),
     pageSize: String(pageSize)
   });
-  return request<PagedResult<AuthAccount>>(`/admin/admins?${query.toString()}`);
+  return request<PagedResult<AuthAccount>>(`/admins/GetAll?${query.toString()}`);
 }
 
 export function createAdmin(
@@ -14,16 +14,16 @@ export function createAdmin(
   password: string,
   phone?: string
 ): Promise<AuthAccount> {
-  return request<AuthAccount>("/admin/admins", {
+  return request<AuthAccount>("/admins/Create", {
     method: "POST",
     body: { email, password, phone: phone?.trim() ? phone.trim() : null }
   });
 }
 
 export function deactivateAdmin(id: string): Promise<AuthAccount> {
-  return request<AuthAccount>(`/admin/admins/${id}/deactivate`, { method: "POST" });
+  return request<AuthAccount>(`/admins/${id}/deactivate`, { method: "POST" });
 }
 
 export function activateAdmin(id: string): Promise<AuthAccount> {
-  return request<AuthAccount>(`/admin/admins/${id}/activate`, { method: "POST" });
+  return request<AuthAccount>(`/admins/${id}/activate`, { method: "POST" });
 }

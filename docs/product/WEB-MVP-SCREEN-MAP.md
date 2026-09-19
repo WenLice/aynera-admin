@@ -1,4 +1,4 @@
-# ElAris Web MVP Screen Map
+# Aynera Web MVP Screen Map
 
 **Version:** 0.1  
 **Status:** Figma and implementation planning  
@@ -24,7 +24,7 @@ Recommended Figma pages:
 10. **Safety & Edge Cases**
 11. **Prototypes**
 
-Do not create a separate design system for Professionals. It is a cohort and service layer inside ElAris.
+Do not create a separate design system for Professionals. It is a cohort and service layer inside Aynera.
 
 ---
 
@@ -166,14 +166,14 @@ The existing public website is largely complete. Add only what supports the func
 
 Purpose:
 
-- Explain that both paths use the same ElAris journey
+- Explain that both paths use the same Aynera journey
 - Explain Professionals eligibility without classist language
 - Link to application
 
 Content:
 
-- ElAris Core
-- ElAris Professionals
+- Aynera Core
+- Aynera Professionals
 - Verified professional activity
 - Clear, criteria-based manual admission
 - No salary or net-worth threshold
@@ -219,8 +219,8 @@ Content:
 
 ### REG-03: Choose path
 
-- ElAris Core
-- ElAris Professionals
+- Aynera Core
+- Aynera Professionals
 - Clear comparison
 - Ability to change before submission
 
@@ -391,7 +391,7 @@ Professionals screens appear only after the shared identity flow and path select
 
 ### PROF-07: Admission criteria explanation
 
-- What ElAris means by active professional identity
+- What Aynera means by active professional identity
 - Authenticity, intent, profile effort, and cohort-fit criteria
 - Accepted verification routes
 - No employer-prestige or financial ranking
@@ -938,7 +938,7 @@ Design these before development:
 
 ## 17. Design review checklist
 
-- Core and Professionals feel like one ElAris system
+- Core and Professionals feel like one Aynera system
 - Mobile web works without horizontal scrolling
 - Every status explains what happens next
 - No fake urgency

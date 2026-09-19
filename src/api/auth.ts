@@ -2,7 +2,7 @@ import { request } from "./client";
 import type { AuthAccount, TokenPayload } from "../types/api";
 
 export function loginWithPassword(identifier: string, password: string): Promise<TokenPayload> {
-  return request<TokenPayload>("/admin/password", {
+  return request<TokenPayload>("/auth/admin/password", {
     method: "POST",
     body: { identifier, password },
     auth: false,
@@ -11,7 +11,7 @@ export function loginWithPassword(identifier: string, password: string): Promise
 }
 
 export function requestAdminOtp(identifier: string): Promise<{ expiresInSeconds: number; retryAfterSeconds: number | null }> {
-  return request("/admin/otp/request", {
+  return request("/auth/admin/otp/request", {
     method: "POST",
     body: { identifier },
     auth: false,
@@ -20,7 +20,7 @@ export function requestAdminOtp(identifier: string): Promise<{ expiresInSeconds:
 }
 
 export function verifyAdminOtp(identifier: string, code: string): Promise<TokenPayload> {
-  return request<TokenPayload>("/admin/otp/verify", {
+  return request<TokenPayload>("/auth/admin/otp/verify", {
     method: "POST",
     body: { identifier, code },
     auth: false,
@@ -29,7 +29,7 @@ export function verifyAdminOtp(identifier: string, code: string): Promise<TokenP
 }
 
 export function getAdminMe(): Promise<AuthAccount> {
-  return request<AuthAccount>("/admin/me");
+  return request<AuthAccount>("/admins/me");
 }
 
 export function logout(refreshToken: string): Promise<null> {

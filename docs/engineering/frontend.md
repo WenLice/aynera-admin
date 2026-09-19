@@ -1,6 +1,6 @@
-# Frontend overview (ElAris clients)
+# Frontend overview (Aynera clients)
 
-Guide for developers working on **any ElAris frontend**. Product specs stay under [`../product/`](../product/). Design under [`../design/`](../design/). Backend contracts: `elaris-api/docs/api-reference.md`.
+Guide for developers working on **any Aynera frontend**. Product specs stay under [`../product/`](../product/). Design under [`../design/`](../design/). Backend contracts: `aynera-api/docs/api-reference.md`.
 
 ---
 
@@ -8,30 +8,30 @@ Guide for developers working on **any ElAris frontend**. Product specs stay unde
 
 | Repo | Audience | Stack (intended) | Status |
 |------|----------|------------------|--------|
-| **`elaris-web`** | Public visitors | Next.js App Router, React, TypeScript, static export | Active marketing site |
-| **`elaris-admin`** | Admins | React + TypeScript (Vite) | Login, inboxes, cities catalog, members, admin management |
-| **`elaris-app`** | Members (mobile) | Expo / React Native | Scaffold pending |
+| **`aynera-web`** | Public visitors | Next.js App Router, React, TypeScript, static export | Active marketing site |
+| **`aynera-admin`** | Admins | React + TypeScript (Vite) | Login, inboxes, cities catalog, members, admin management |
+| **`aynera-app`** | Members (mobile) | Expo / React Native | Scaffold pending |
 
 Each repo keeps **repo-local** docs (`docs/setup.md`, `docs/structure.md`, developer guide). This file is the **cross-client** overview.
 
 | Client | Local developer guide |
 |--------|------------------------|
-| Web | `elaris-web/docs/developer-guide.md` |
+| Web | `aynera-web/docs/developer-guide.md` |
 | Admin | [admin-developer-guide.md](./admin-developer-guide.md) |
-| App | `elaris-app/docs/developer-guide.md` |
+| App | `aynera-app/docs/developer-guide.md` |
 
 ---
 
 ## Shared rules for all clients
 
-1. **API is the contract** — use `elaris-api/docs/api-reference.md`. Do not invent field names or auth flows.
+1. **API is the contract** — use `aynera-api/docs/api-reference.md`. Do not invent field names or auth flows.
 2. **Envelope** — JSON APIs return `ApiResponse<T>` (`success`, `data`, `statusCode`, `errorCode`, `errors`, `correlationId`).
 3. **Auth (members)** — phone or email with OTP or password → access JWT (1 hour, `aud=member`) + refresh token (90 days); refresh rotation; `Authorization: Bearer {accessToken}` on protected routes.
-4. **Auth (admin)** — `POST /admin/password` or `/admin/otp/request` + `/admin/otp/verify` → access JWT (1 hour, `aud=admin`) + refresh token (24 hours). Refresh/logout on `/auth/refresh` and `/auth/logout`.
+4. **Auth (admin)** — `POST /auth/admin/password` or `/auth/admin/otp/request` + `/auth/admin/otp/verify` → access JWT (1 hour, `aud=admin`) + refresh token (24 hours). Refresh/logout on `/auth/refresh` and `/auth/logout`.
 5. **Correlation** — send `X-Correlation-Id` when calling the API so logs can align.
-6. **CORS** — local origins commonly `3000` (web), `5173` / `5174` (Vite admin). Configure production origins in API `Elaris:Cors:Origins`.
+6. **CORS** — local origins commonly `3000` (web), `5173` / `5174` (Vite admin). Configure production origins in API `Aynera:Cors:Origins`.
 7. **Secrets** — never commit API signing keys, production DB strings, or SMS credentials in frontend repos.
-8. **Docs** — product/ops/design changes go in `elaris-admin/docs`; implementation notes stay in each app’s `docs/`.
+8. **Docs** — product/ops/design changes go in `aynera-admin/docs`; implementation notes stay in each app’s `docs/`.
 
 ---
 
@@ -43,7 +43,7 @@ When building interactive apps (admin / mobile), prefer:
 UI screens / components
   → feature hooks or services
     → API client (typed fetch/axios wrapper)
-      → elaris-api
+      → aynera-api
 ```
 
 | Layer | Owns |
@@ -65,9 +65,9 @@ Enter phone → request OTP → enter code → verify → store tokens → call 
 
 - Dev OTP appears in the **API console** until a real SMS provider is wired.
 - On `401` from refresh reuse/expiry, clear session and return to login.
-- Web member product is the **app**, not `elaris-web`. Marketing stays public.
+- Web member product is the **app**, not `aynera-web`. Marketing stays public.
 
-Admin auth: `POST /admin/password` or `/admin/otp/request` + `/admin/otp/verify` → access JWT (1 hour, `aud=admin`) + refresh token (24 hours). Current admin: `GET /admin/me`. Refresh/logout on `/auth/refresh` and `/auth/logout`.
+Admin auth: `POST /auth/admin/password` or `/auth/admin/otp/request` + `/auth/admin/otp/verify` → access JWT (1 hour, `aud=admin`) + refresh token (24 hours). Current admin: `GET /users/admins/me`. Refresh/logout on `/auth/refresh` and `/auth/logout`.
 
 ---
 
@@ -80,5 +80,5 @@ Admin auth: `POST /admin/password` or `/admin/otp/request` + `/admin/otp/verify`
 | Middleware / headers | [backend/middleware.md](./backend/middleware.md) |
 | Web MVP screens | [../product/WEB-MVP-SCREEN-MAP.md](../product/WEB-MVP-SCREEN-MAP.md) |
 | Website design | [../design/WEBSITE-OVERVIEW.md](../design/WEBSITE-OVERVIEW.md) |
-| API endpoints | `elaris-api/docs/api-reference.md` |
-| Backend onboarding | `elaris-api/docs/developer-guide.md` |
+| API endpoints | `aynera-api/docs/api-reference.md` |
+| Backend onboarding | `aynera-api/docs/developer-guide.md` |

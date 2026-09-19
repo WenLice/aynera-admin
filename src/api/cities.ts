@@ -2,7 +2,7 @@ import { request } from "./client";
 import type { EarlyAccessCity } from "../types/api";
 
 export function listCities(): Promise<EarlyAccessCity[]> {
-  return request<EarlyAccessCity[]>("/early-access/cities");
+  return request<EarlyAccessCity[]>("/early-access/cities/GetAll");
 }
 
 export function createCity(input: {
@@ -11,7 +11,7 @@ export function createCity(input: {
   sortOrder: number;
   isActive: boolean;
 }): Promise<EarlyAccessCity> {
-  return request<EarlyAccessCity>("/early-access/cities", {
+  return request<EarlyAccessCity>("/early-access/cities/Create", {
     method: "POST",
     body: input
   });

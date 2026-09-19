@@ -1,14 +1,14 @@
-# ElAris Matchmaking and Relationship Rules
+# Aynera Matchmaking and Relationship Rules
 
 **Version:** 0.1  
 **Status:** Working rules for founder, product, safety, and advisory review  
-**Applies to:** ElAris Core and ElAris Professionals
+**Applies to:** Aynera Core and Aynera Professionals
 
 ---
 
 ## 1. Purpose
 
-This document defines how ElAris decides who may be considered for an introduction, how human curators make final pilot decisions, how outcomes are recorded, and how members move through Meet, Focus, Together, and Couple Space.
+This document defines how Aynera decides who may be considered for an introduction, how human curators make final pilot decisions, how outcomes are recorded, and how members move through Meet, Focus, Together, and Couple Space.
 
 The first pilot will use rules plus human judgment. It will not claim that an algorithm can predict love.
 
@@ -385,7 +385,7 @@ Members can optionally record:
 - Trusted contact sharing
 - Optional check-in preference
 
-ElAris does not provide emergency response or continuous location surveillance.
+Aynera does not provide emergency response or continuous location surveillance.
 
 ### 14.2 Private feedback
 

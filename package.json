@@ -1,8 +1,8 @@
 {
-  "name": "elaris-admin",
+  "name": "aynera-admin",
   "private": true,
   "version": "0.0.0",
-  "description": "ElAris admin panel and documentation",
+  "description": "Aynera admin panel and documentation",
   "type": "module",
   "scripts": {
     "dev": "vite",

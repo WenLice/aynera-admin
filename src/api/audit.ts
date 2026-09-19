@@ -29,5 +29,5 @@ export function listAuditEvents(
   if (filters.subjectId?.trim()) {
     query.set("subjectId", filters.subjectId.trim());
   }
-  return request<PagedResult<AuditEventRow>>(`/admin/audit/events?${query.toString()}`);
+  return request<PagedResult<AuditEventRow>>(`/audit/events/GetAll?${query.toString()}`);
 }

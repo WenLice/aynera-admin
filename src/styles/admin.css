@@ -1,4 +1,4 @@
-/* ElAris Admin Portal — shared mockup styles (design tokens v0.2) */
+/* Aynera Admin Portal — shared mockup styles (design tokens v0.2) */
 :root {
   --plum: #4a2744;
   --plum-dark: #2f1530;
@@ -169,11 +169,11 @@ img {
   font-size: 12px;
 }
 
-.brand-name .el {
+.brand-name .ay {
   color: #fff;
 }
 
-.brand-name .aris {
+.brand-name .nera {
   color: var(--rose);
 }
 
@@ -716,6 +716,47 @@ img {
   background: #fff;
 }
 
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+.form-grid input,
+.form-grid textarea {
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0 10px;
+  background: var(--paper);
+  font: inherit;
+}
+
+.form-grid textarea {
+  height: auto;
+  min-height: 72px;
+  padding: 10px;
+  resize: vertical;
+}
+
+.form-grid input:focus,
+.form-grid textarea:focus {
+  outline: 2px solid rgba(74, 39, 68, 0.18);
+  border-color: var(--plum);
+  background: #fff;
+}
+
 .seg {
   display: inline-flex;
   background: var(--plum-light);
@@ -1243,7 +1284,7 @@ table.data tbody tr.clickable {
   font-size: 14px;
 }
 
-.login-card .brand-name .el {
+.login-card .brand-name .ay {
   color: var(--plum);
 }
 

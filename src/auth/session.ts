@@ -1,5 +1,5 @@
-const accessKey = "elaris.admin.accessToken";
-const refreshKey = "elaris.admin.refreshToken";
+const accessKey = "aynera.admin.accessToken";
+const refreshKey = "aynera.admin.refreshToken";
 
 export type StoredSession = {
   accessToken: string;

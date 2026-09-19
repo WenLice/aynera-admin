@@ -1,5 +1,5 @@
 {
-  "$schema": "ElAris design tokens v0.2",
+  "$schema": "Aynera design tokens v0.2",
   "color": {
     "brand": {
       "primary": { "value": "#4A2744", "description": "Deep plum — commitment, depth" },

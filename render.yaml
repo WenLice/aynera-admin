@@ -1,0 +1,33 @@
+# Render blueprint for the Aynera admin panel.
+#
+# A static site: Vite builds a single-page app into dist/, which Render serves directly.
+# There is no server here, so nothing secret can live in it — the panel authenticates against
+# the API like any other client, and every staff endpoint enforces its own policy. Serving the
+# bundle publicly exposes the admin screens' shape, not their data.
+#
+# The API URL is baked in at build time from .env.production. To point a deployment somewhere
+# else, set VITE_AYNERA_API_BASE_URL in the dashboard; it overrides the committed default.
+services:
+  - type: web
+    name: aynera-admin
+    runtime: static
+    plan: free
+    branch: main
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./dist
+    routes:
+      # The panel routes client-side, so any unknown path must return index.html rather than
+      # a 404 — otherwise a refresh on /members or a pasted deep link breaks.
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: same-origin

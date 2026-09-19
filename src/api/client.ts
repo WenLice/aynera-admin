@@ -5,7 +5,7 @@ import { ApiError } from "./errors";
 const defaultApiBase = "http://localhost:5057";
 
 export function getApiBaseUrl(): string {
-  const raw = import.meta.env.VITE_ELARIS_API_BASE_URL?.trim();
+  const raw = import.meta.env.VITE_AYNERA_API_BASE_URL?.trim();
   return (raw && raw.length > 0 ? raw : defaultApiBase).replace(/\/+$/, "");
 }
 

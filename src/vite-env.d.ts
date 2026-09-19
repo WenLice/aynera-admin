@@ -1,7 +1,7 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-  readonly VITE_ELARIS_API_BASE_URL?: string;
+  readonly VITE_AYNERA_API_BASE_URL?: string;
 }
 
 interface ImportMeta {

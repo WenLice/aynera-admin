@@ -71,6 +71,27 @@ export type EarlyAccessCity = {
   isActive: boolean;
 };
 
+export type VenueType = "Cafe" | "EventPlace";
+
+export type Venue = {
+  id: string;
+  name: string;
+  type: VenueType;
+  cityId: string;
+  cityName: string | null;
+  area: string;
+  address: string;
+  photoUrls: string[];
+  contactName: string;
+  contactEmail: string;
+  contactPhoneE164: string;
+  capacity: number | null;
+  notes: string | null;
+  isActive: boolean;
+  createdAtUtc: string;
+  updatedAtUtc: string | null;
+};
+
 export type FeedbackRow = {
   id: string;
   fullName: string;
@@ -103,8 +124,8 @@ export type MemberAdminRow = {
   isActive: boolean;
   isRestricted: boolean;
   createdAtUtc: string;
-  firstName: string | null;
-  lastName: string | null;
+  name: string | null;
+  nickname: string | null;
   gender: string | null;
   dateOfBirth: string | null;
   city: string | null;

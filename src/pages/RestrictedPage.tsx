@@ -4,7 +4,7 @@ import type { MemberAdminRow } from "../types/api";
 import { formatWhen, InboxPage } from "./InboxPage";
 
 function displayName(row: MemberAdminRow): string {
-  const name = [row.firstName, row.lastName].filter(Boolean).join(" ").trim();
+  const name = (row.name ?? "").trim();
   return name.length > 0 ? name : "—";
 }
 

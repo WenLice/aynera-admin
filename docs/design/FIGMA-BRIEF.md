@@ -1,4 +1,4 @@
-# ElAris Figma brief v0.1
+# Aynera Figma brief v0.1
 
 Use this document to build the Figma file. Import colours and spacing from `design-tokens.json` as Figma Variables.
 
@@ -7,7 +7,7 @@ Use this document to build the Figma file. Import colours and spacing from `desi
 > [`../product/WEB-MVP-PRODUCT-SPEC.md`](../product/WEB-MVP-PRODUCT-SPEC.md) and
 > [`../product/WEB-MVP-SCREEN-MAP.md`](../product/WEB-MVP-SCREEN-MAP.md) as the source of truth.
 
-**Figma file name:** `ElAris — Product UI v0.1`  
+**Figma file name:** `Aynera — Product UI v0.1`  
 **Design order:** Design system → Public web → Admin → Mobile (pilot frames)
 
 ---
@@ -98,7 +98,7 @@ Frame width: **1280px** desktop, **390px** mobile web.
 Logo · How it works · Safety · Apply · Login (future)
 
 ### Public web footer
-Privacy · Terms · Safety · Deletion · Grievance · © ElAris
+Privacy · Terms · Safety · Deletion · Grievance · © Aynera
 
 ---
 

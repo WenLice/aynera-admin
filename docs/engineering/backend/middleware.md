@@ -1,6 +1,6 @@
 # API middleware pipeline
 
-Applies to `elaris-api`. Keep custom middleware thin; business rules stay in Application features.
+Applies to `aynera-api`. Keep custom middleware thin; business rules stay in Application features.
 
 ## Order (outer → inner)
 
@@ -24,7 +24,7 @@ HTTP request
 | **CorrelationId** | Custom | Read or generate `X-Correlation-Id`. Store in request scope (`ICorrelationId`) so `AuditLogs`, `AuditEvents`, and clients share one id. |
 | **ExceptionHandling** | Custom | Catch unhandled domain/infra errors → `ApiResponse` JSON (`errorCode` + `statusCode`). No stack traces in Production. |
 | **HTTPS redirection** | Built-in | |
-| **CORS** | Built-in | Allow configured `elaris-web` / `elaris-admin` origins. |
+| **CORS** | Built-in | Allow configured `aynera-web` / `aynera-admin` origins. |
 | **Authentication** | Built-in JWT Bearer | Validate access token (`iss`, `aud`, `exp`, signature). |
 | **CurrentUser** | Custom | After auth, set request-scoped `ICurrentUser.UserId` from `NameIdentifier` / `sub`. Inject `ICurrentUser` in controllers/services. |
 | **Authorization** | Built-in | Policies: `Member`, `Admin`, later `RecentAuth`. |

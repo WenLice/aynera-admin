@@ -1,4 +1,4 @@
-# ElAris UI copy deck v0.1
+# Aynera UI copy deck v0.1
 
 Use exact or lightly edited copy in Figma and implementation. Hindi translations marked `[HI]` — professional translation review required before launch.
 
@@ -26,7 +26,7 @@ Use exact or lightly edited copy in Figma and implementation. Hindi translations
 When you choose each other, we stop showing you anyone else.
 
 **Hero subhead:**  
-ElAris is a verified relationship journey for professionals in Delhi and Bangalore — fewer introductions, deeper conversations, and a private space when you both choose exclusivity.
+Aynera is a verified relationship journey for professionals in Delhi and Bangalore — fewer introductions, deeper conversations, and a private space when you both choose exclusivity.
 
 **Primary CTA:** Apply for early access  
 **Secondary CTA:** How it works
@@ -89,7 +89,7 @@ We're building your zone's cohort. You won't see empty matches — we'll notify 
 
 ## Account deletion (WEB-12)
 
-**Headline:** Delete your ElAris account
+**Headline:** Delete your Aynera account
 
 **Body:**  
 You can request deletion here or in the app. We will remove your profile and personal data subject to legal and safety retention exceptions explained in our Privacy Notice.
@@ -104,7 +104,7 @@ You can request deletion here or in the app. We will remove your profile and per
 We'll send a code to verify your number. Standard SMS rates may apply.
 
 **Age gate:**  
-ElAris is for adults 18+. Your date of birth is used for age assurance and is not shown on your public profile.
+Aynera is for adults 18+. Your date of birth is used for age assurance and is not shown on your public profile.
 
 **Liveness:**  
 A short video selfie helps us confirm you're real. Raw verification media is deleted per our retention policy.
@@ -168,7 +168,7 @@ For the time you choose, both of you disappear from new introductions. Unrelated
 **Request title:** Choose each other exclusively?  
 **Consequences (must show before confirm):**
 - Both profiles removed from all discovery
-- New matches and likes disabled on ElAris
+- New matches and likes disabled on Aynera
 - Previous conversations archived privately
 - Your couple space opens
 

@@ -44,7 +44,7 @@ Console/stub SMS and email adapters must **never** log codes, links, full phones
 
 ## Seq
 
-Configure `Seq:ServerUrl` or `ELARIS_SEQ_URL`. Serilog writes Console + Seq for the **normal** log stream. Audit detail (`AuditEvents` / `Changes`) stays in Postgres for the admin UI.
+Configure `Seq:ServerUrl` or `AYNERA_SEQ_URL`. Serilog writes Console + Seq for the **normal** log stream. Audit detail (`AuditEvents` / `Changes`) stays in Postgres for the admin UI.
 
 ## Diagnostic layer logging
 
@@ -67,11 +67,11 @@ See [../middleware.md](../middleware.md): CorrelationId sets `ICorrelationId`; R
 - Richer audit row UI (actor email, field-diff viewer) on the detail rail
 - Client `POST /logs` batch ingest
 - Retention job for `AuditLogs`
-- Media off Postgres `bytea` + account-delete compress/archive job — see `elaris-api/docs/deferred-work.md`
+- Media off Postgres `bytea` + account-delete compress/archive job — see `aynera-api/docs/deferred-work.md`
 
 ## Admin UI (current)
 
 - Detail panes split **details | audit trail** (member detail; city edit). List pages stay list-only.
-- `GET /admin/audit/events` — subject-scoped with `memberId` and/or `subjectType` + `subjectId` returns all actions for that subject; without a subject, defaults to member restrict/unrestrict
+- `GET /audit/events` — subject-scoped with `memberId` and/or `subjectType` + `subjectId` returns all actions for that subject; without a subject, defaults to member restrict/unrestrict
 - Dedicated **Restricted** list at `/restricted` (members with `isRestricted=true`)
 - No standalone Audit nav page

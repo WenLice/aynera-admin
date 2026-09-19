@@ -74,8 +74,8 @@ export function LoginPage() {
           <img className="login-logo" src="/logo-mark.svg" alt="" width={56} height={56} />
           <div className="brand-text">
             <div className="brand-name">
-              <span className="el">El</span>
-              <span className="aris">Aris</span>
+              <span className="ay">Ay</span>
+              <span className="nera">Nera</span>
             </div>
             <div className="brand-sub">The Era of Togetherness.</div>
           </div>

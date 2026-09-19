@@ -12,12 +12,12 @@ export function AppShell() {
   return (
     <div className="app">
       <aside className="sidebar">
-        <Link className="brand" to="/" aria-label="ElAris home">
+        <Link className="brand" to="/" aria-label="Aynera home">
           <img className="brand-logo" src="/logo-mark.svg" alt="" width={32} height={32} />
           <div className="brand-text">
             <div className="brand-name">
-              <span className="el">El</span>
-              <span className="aris">Aris</span>
+              <span className="ay">Ay</span>
+              <span className="nera">Nera</span>
             </div>
             <div className="brand-sub">The Era of Togetherness.</div>
           </div>
@@ -35,6 +35,9 @@ export function AppShell() {
           </NavLink>
           <NavLink to="/cities">
             <span className="nav-icon">▣</span> Cities
+          </NavLink>
+          <NavLink to="/venues">
+            <span className="nav-icon">◈</span> Venues
           </NavLink>
           <div className="nav-section">Inboxes</div>
           <NavLink to="/suggestions">
@@ -61,7 +64,7 @@ export function AppShell() {
       <div className="main">
         <header className="topbar">
           <div className="breadcrumb">
-            ElAris / <strong>Admin</strong>
+            Aynera / <strong>Admin</strong>
           </div>
           <div className="topbar-actions">
             <div className="admin-chip">

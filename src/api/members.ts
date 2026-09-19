@@ -25,25 +25,25 @@ export function listMembers(
   if (filters.isRestricted !== undefined) {
     query.set("isRestricted", String(filters.isRestricted));
   }
-  return request<PagedResult<MemberAdminRow>>(`/admin/members?${query.toString()}`);
+  return request<PagedResult<MemberAdminRow>>(`/members/GetAll?${query.toString()}`);
 }
 
 export function getMember(id: string): Promise<MemberAdminDetail> {
-  return request<MemberAdminDetail>(`/admin/members/${id}`);
+  return request<MemberAdminDetail>(`/members/${id}`);
 }
 
 export function getMemberPhotoBlob(memberId: string, photoId: string): Promise<Blob> {
-  return requestBlob(`/admin/members/${memberId}/photos/${photoId}`);
+  return requestBlob(`/photos/${memberId}/${photoId}`);
 }
 
 export function getMemberVideoBlob(memberId: string): Promise<Blob> {
-  return requestBlob(`/admin/members/${memberId}/introduction-video/content`);
+  return requestBlob(`/introduction-video/${memberId}/content`);
 }
 
 export function restrictMember(id: string): Promise<MemberAdminRow> {
-  return request<MemberAdminRow>(`/admin/members/${id}/restrict`, { method: "POST" });
+  return request<MemberAdminRow>(`/members/${id}/restrict`, { method: "POST" });
 }
 
 export function unrestrictMember(id: string): Promise<MemberAdminRow> {
-  return request<MemberAdminRow>(`/admin/members/${id}/unrestrict`, { method: "POST" });
+  return request<MemberAdminRow>(`/members/${id}/unrestrict`, { method: "POST" });
 }

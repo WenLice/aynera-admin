@@ -1,4 +1,4 @@
-# Backend plans (`elaris-api`)
+# Backend plans (`aynera-api`)
 
 Implementation plans for the ASP.NET Core modular monolith live here, separated by feature. Product requirements stay under [`../../product/`](../../product/). Architecture overview: [`../architecture.md`](../architecture.md). ADRs: [`../adr/`](../adr/).
 
@@ -12,8 +12,8 @@ Implementation onboarding and live HTTP contracts live in the API repo:
 
 | Doc | Path |
 |-----|------|
-| Developer guide | `elaris-api/docs/developer-guide.md` |
-| API reference | `elaris-api/docs/api-reference.md` |
+| Developer guide | `aynera-api/docs/developer-guide.md` |
+| API reference | `aynera-api/docs/api-reference.md` |
 
 Future features add sibling folders (for example `applications/`, `profiles/`).
 

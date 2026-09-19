@@ -6,7 +6,7 @@ Accepted
 
 ## Context
 
-ElAris needs one identity **store** for members (phone/email OTP or password) and admins (password/OTP on a separate admin door later), two JWT audiences (`member`, `admin`), and safe session expiry with future Together step-up (FR-01). The API is a modular monolith ([ADR 001](./001-modular-monolith.md)).
+Aynera needs one identity **store** for members (phone/email OTP or password) and admins (password/OTP on a separate admin door later), two JWT audiences (`member`, `admin`), and safe session expiry with future Together step-up (FR-01). The API is a modular monolith ([ADR 001](./001-modular-monolith.md)).
 
 Options considered:
 

@@ -1,6 +1,6 @@
-# ElAris admin documentation
+# Aynera admin documentation
 
-All product, engineering, operations, and sensitive documents for ElAris live in this tree.
+All product, engineering, operations, and sensitive documents for Aynera live in this tree.
 
 | Folder | Contents |
 |--------|----------|
@@ -13,8 +13,8 @@ All product, engineering, operations, and sensitive documents for ElAris live in
 
 | Start here | Doc |
 |------------|-----|
-| Backend onboarding | `elaris-api/docs/developer-guide.md` |
-| API endpoints | `elaris-api/docs/api-reference.md` |
+| Backend onboarding | `aynera-api/docs/developer-guide.md` |
+| API endpoints | `aynera-api/docs/api-reference.md` |
 | Frontend (all clients) | [engineering/frontend.md](./engineering/frontend.md) |
 | Admin UI onboarding | [engineering/admin-developer-guide.md](./engineering/admin-developer-guide.md) |
 | Admin UI local setup | [setup.md](./setup.md) |

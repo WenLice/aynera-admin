@@ -10,13 +10,13 @@ function pageQuery(page: number, pageSize: number): string {
 }
 
 export function listWaitlist(page: number, pageSize = 15): Promise<PagedResult<WaitlistRow>> {
-  return request<PagedResult<WaitlistRow>>(`/early-access/signups?${pageQuery(page, pageSize)}`);
+  return request<PagedResult<WaitlistRow>>(`/early-access/signups/GetAll?${pageQuery(page, pageSize)}`);
 }
 
 export function listSuggestions(page: number, pageSize = 15): Promise<PagedResult<SuggestionRow>> {
-  return request<PagedResult<SuggestionRow>>(`/admin/suggestions?${pageQuery(page, pageSize)}`);
+  return request<PagedResult<SuggestionRow>>(`/suggestions/GetAll?${pageQuery(page, pageSize)}`);
 }
 
 export function listFeedback(page: number, pageSize = 15): Promise<PagedResult<FeedbackRow>> {
-  return request<PagedResult<FeedbackRow>>(`/admin/feedback?${pageQuery(page, pageSize)}`);
+  return request<PagedResult<FeedbackRow>>(`/feedback/GetAll?${pageQuery(page, pageSize)}`);
 }

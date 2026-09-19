@@ -1,7 +1,7 @@
 # Structure
 
 ```text
-elaris-admin/
+aynera-admin/
 ├── src/                    # Admin application (Vite + React + TypeScript)
 │   ├── pages/
 │   ├── components/
@@ -9,7 +9,7 @@ elaris-admin/
 │   ├── auth/
 │   ├── types/
 │   └── styles/
-├── docs/                   # All ElAris documentation (system of record)
+├── docs/                   # All Aynera documentation (system of record)
 │   ├── product/
 │   ├── engineering/
 │   │   ├── architecture.md

@@ -92,12 +92,12 @@ Not an EF entity. Key: `otp:phone:{e164}` (plus rate-limit keys `otp:rl:phone:{e
 
 | Claim | Example | Notes |
 |-------|---------|--------|
-| `iss` | `elaris-api` | `ELARIS_JWT_ISSUER` |
+| `iss` | `aynera-api` | `AYNERA_JWT_ISSUER` |
 | `aud` | `member` | `member` for the app; `admin` for the admin site |
 | `sub` | user Guid | `AppUser.Id` |
 | `sid` | session Guid | Refresh session |
 | `role` | `member` | `member` or `admin` |
-| `is_super_admin` | `true` / `false` | Admin tokens only. Informational; `POST /admin/admins` reads the database flag |
+| `is_super_admin` | `true` / `false` | Admin tokens only. Informational; `POST /users/admins` reads the database flag |
 | `amr` | `otp` or `pwd` | Later `mfa` |
 | `auth_time` | unix seconds | Together step-up later |
 | `jti` | unique id | Access token id |

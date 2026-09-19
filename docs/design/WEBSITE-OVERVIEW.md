@@ -1,4 +1,4 @@
-# ElAris Public Website — Design Overview v1
+# Aynera Public Website — Design Overview v1
 
 **Audience:** Gen Z + young professionals (≈22–35), Delhi and Bangalore  
 **Goal:** Make people feel “this is different from Tinder/Bumble” in 3 seconds, then apply for the waitlist.  
@@ -8,7 +8,7 @@
 
 ## What the best sites teach us
 
-| Reference | What they do well | What ElAris takes | What we avoid |
+| Reference | What they do well | What Aynera takes | What we avoid |
 |-----------|-------------------|---------------------|---------------|
 | **Hinge** (hinge.co) | One sharp promise (“designed to be deleted”); editorial calm; outcomes over addiction | Outcome-led brand line; quiet confidence; journey narrative | Love-scientist jargon; US-only tone |
 | **Bumble** | Safety as a visible product; optimistic energy | Safety centre as a first-class page; trust without fear mongering | Yellow clone; women-message-first as the whole brand |
@@ -54,7 +54,7 @@
 
 Per brand rules — **one composition**, not a dashboard:
 
-1. **ElAris** (hero-level brand)  
+1. **Aynera** (hero-level brand)  
 2. **One headline:** When you choose each other, we stop the search.  
 3. **One line:** Verified introductions for people who want something real — then a private space when you both choose.  
 4. **One CTA group:** Apply for early access · How it works  
